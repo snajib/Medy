@@ -20,5 +20,9 @@ steps:
   displayName: 'install expo cli'
 
 - script: 
+    npm install npm -g
+  displayName: 'install node modules'
+
+- script: 
     npm start
   displayName: 'yarn start (with expo, adjust when ejected to npm install and npm run build)'
