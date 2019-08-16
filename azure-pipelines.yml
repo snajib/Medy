@@ -15,6 +15,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    yarn start
+- script: 
+    npm install -g expo-cli
+  displayName: 'install expo cli'
+
+- script: 
+    npm start
   displayName: 'yarn start (with expo, adjust when ejected to npm install and npm run build)'
