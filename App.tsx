@@ -23,6 +23,10 @@ const textStyle: TextStyle = {
 const cardStyle: ViewStyle = {
    backgroundColor: "#fff",
    borderRadius: 12,
+   shadowColor: "#000",
+   shadowOffset: { width: 0, height: 3 },
+   shadowOpacity: 0.8,
+   shadowRadius: 3,
    height: "70%",
    width: "65%"
 };
