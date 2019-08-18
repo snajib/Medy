@@ -20,7 +20,6 @@ export default function App() {
    );
 }
 
-//Background Color Style
 const containerStyle: ViewStyle = {
    flex: 1,
    backgroundColor: "#5F44BA",
@@ -28,12 +27,10 @@ const containerStyle: ViewStyle = {
    justifyContent: "center"
 };
 
-//Text Styles
 const textStyle: TextStyle = {
    color: "red"
 };
 
-//Card Style and format
 const cardStyle: ViewStyle = {
    backgroundColor: "#fff",
    borderRadius: 12,
@@ -52,7 +49,6 @@ const linearGradient: ViewStyle = {
    borderRadius: 5
 };
 
-//Create all styles above
 const styles = StyleSheet.create({
    containerStyle,
    cardStyle,
