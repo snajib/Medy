@@ -7,7 +7,7 @@ import {
 } from "react-navigation";
 import { LinearGradient } from "expo-linear-gradient";
 
-class EmployerFinderScreen extends React.Component {
+export class EmployerFinderScreen extends React.Component {
   render() {
     return (
       <View style={styles.containerStyle}>
@@ -23,7 +23,7 @@ class EmployerFinderScreen extends React.Component {
         />
         <View style={styles.cardStyle}>
           <View style={styles.centerText}>
-            <Text>Home</Text>
+            <Text>Finder</Text>
           </View>
         </View>
       </View>
@@ -80,4 +80,3 @@ const styles = StyleSheet.create({
       View other options in the more tab (micro transactions)
 */
 
-export { EmployerFinderScreen };

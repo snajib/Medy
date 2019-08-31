@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, ViewStyle, TextStyle } from "react-native";
-import { createStackNavigator, createAppContainer } from "react-navigation";
 import { LinearGradient } from "expo-linear-gradient";
 
-class EmployeeMoreScreen extends React.Component {
+export class EmployerPostingsScreen extends React.Component {
   render() {
     return (
       <View style={styles.containerStyle}>
@@ -19,7 +18,7 @@ class EmployeeMoreScreen extends React.Component {
         />
         <View style={styles.cardStyle}>
           <View style={styles.centerText}>
-            <Text>More</Text>
+            <Text>Postings</Text>
           </View>
         </View>
       </View>
@@ -65,4 +64,3 @@ const styles = StyleSheet.create({
   centerText
 });
 
-export { EmployeeMoreScreen };
