@@ -1,5 +1,9 @@
 import React from "react";
-import { createBottomTabNavigator, createAppContainer, createDrawerNavigator } from "react-navigation";
+import {
+  createBottomTabNavigator,
+  createAppContainer,
+  createDrawerNavigator
+} from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { EmployerPostingsScreen } from "./Screens/EmployerPostingsScreen";
 import { EmployerMoreScreen } from "./Screens/EmployerMoreScreen";
@@ -37,31 +41,30 @@ const TabNavigator = createBottomTabNavigator(
     More: { screen: EmployerMoreScreen }
   },
   {
-
-    defaultNavigationOptions: ({navigation}) => ({
+    defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) =>
         getTabBarIcon(navigation, focused, tintColor)
     }),
-    
+
     tabBarOptions: {
-      style: { paddingBottom: 10, height: 70 },
+      style: {
+        height: 60,
+        paddingTop: 10
+      },
       activeTintColor: "black",
       inactiveTintColor: "gray"
     }
   }
 );
 
-const DrawerNavigator = createDrawerNavigator(
-  {
-
-    Home: {screen: TabNavigator},
-    Profile: {screen: EmployerProfileScreen},
-    Account: {screen: EmployerAccountScreen},
-    History: {screen: EmployerHistoryScreen},
-    Settings: {screen: EmployerSettingsScreen},
-    Help: {screen: EmployerHelpScreen}
-  }
-)
+const DrawerNavigator = createDrawerNavigator({
+  Home: { screen: TabNavigator },
+  Profile: { screen: EmployerProfileScreen },
+  Account: { screen: EmployerAccountScreen },
+  History: { screen: EmployerHistoryScreen },
+  Settings: { screen: EmployerSettingsScreen },
+  Help: { screen: EmployerHelpScreen }
+});
 
 const AppContainer = createAppContainer(DrawerNavigator);
 
