@@ -1,5 +1,24 @@
 import React from "react";
-import { createBottomTabNavigator, createAppContainer, createDrawerNavigator } from "react-navigation";
+import {
+  createBottomTabNavigator,
+  createAppContainer,
+  createDrawerNavigator,
+  createStackNavigator,
+  DrawerItems,
+  NavigationEvents
+} from "react-navigation";
+import {
+  SafeAreaView, 
+  ScrollView, 
+  Button,
+  View,
+  Text,
+  ViewStyle,
+  ImageStyle,
+  StyleSheet,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { EmployerPostingsScreen } from "./Screens/EmployerPostingsScreen";
 import { EmployerMoreScreen } from "./Screens/EmployerMoreScreen";
@@ -29,6 +48,24 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   return <IconComponent name={iconName} size={25} color={tintColor} />;
 };
 
+
+const customeDrawerComponent = (props) => (
+  <SafeAreaView style={{flex: 1}}>
+    <View style={styles.ProfileImageContainer}>
+      <TouchableOpacity onPress={() => props.navigation.navigate('EmployerProfileScreen')}>
+        <Image source={require('./assets/ProfilePic.png')} style={styles.ProfileImageStyle} />
+        <View>
+          <Text> Name </Text>        
+          <Text> Job </Text>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <ScrollView>
+      <DrawerItems {...props} />
+    </ScrollView>
+  </SafeAreaView>
+)
+
 const TabNavigator = createBottomTabNavigator(
   {
     Home: { screen: EmployerHomeScreen },
@@ -51,17 +88,35 @@ const TabNavigator = createBottomTabNavigator(
   }
 );
 
-const DrawerNavigator = createDrawerNavigator(
-  {
+const DrawerNavigator = createDrawerNavigator({
+  Home: { 
+    screen: TabNavigator},
+  Account: { screen: EmployerAccountScreen },
+  History: { screen: EmployerHistoryScreen },
+  Settings: { screen: EmployerSettingsScreen },
+  Help: { screen: EmployerHelpScreen }
+}, {
+  contentComponent: customeDrawerComponent
+});
 
-    Home: {screen: TabNavigator},
-    Profile: {screen: EmployerProfileScreen},
-    Account: {screen: EmployerAccountScreen},
-    History: {screen: EmployerHistoryScreen},
-    Settings: {screen: EmployerSettingsScreen},
-    Help: {screen: EmployerHelpScreen}
-  }
-)
+const ProfileImageStyle: ImageStyle = {
+  height: 120,
+  width: 120, 
+  borderRadius: 60
+}
+
+const ProfileImageContainer: ViewStyle = {
+  flexDirection: 'row',
+  height: 150, 
+  backgroundColor: 'white', 
+  alignItems: 'center',
+  justifyContent: 'center'
+};
+
+const styles = StyleSheet.create({
+  ProfileImageContainer,
+  ProfileImageStyle
+});
 
 const AppContainer = createAppContainer(DrawerNavigator);
 
