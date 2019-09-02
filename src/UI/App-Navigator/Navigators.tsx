@@ -58,7 +58,8 @@ const DrawerStackNavigator = createStackNavigator({
   EmployerSettingsScreen,
   EmployerHelpScreen,
   */
-  EmployerProfileScreen
+  EmployerProfileScreen,
+  headerMode: "none"
 });
 
 const DrawerNavigator = createDrawerNavigator(

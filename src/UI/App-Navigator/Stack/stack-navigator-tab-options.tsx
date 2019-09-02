@@ -1,3 +1,5 @@
 export const stackNavigatorTabOptions = {
-    //TODO: fix header
-}
+  navigationOptions: ({ navigation }) => ({
+    headerMode: "none"
+  })
+};
