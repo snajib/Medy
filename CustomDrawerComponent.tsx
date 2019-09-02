@@ -1,5 +1,5 @@
 import React from "react";
-import {DrawerItems} from "react-navigation";
+import {DrawerItems, DrawerItemsProps} from "react-navigation";
 import {
   View,
   Text,
@@ -9,20 +9,21 @@ import {
   SafeAreaView,
 } from "react-native";
 
-export class CustomDrawerComponent extends React.Component {
-  constructor(props) {
-      super(props);        
-      this.state = {};
-    }
-    
+
+export class CustomDrawerComponent extends React.Component <DrawerItemsProps>{
+
+  public handleNavigate = () => () => {
+    this.props.navigation.navigate('EmployerProfileScreen');
+    return;
+  };
+
   render() {        
-    const { navigate } = this.props.navigation;
     return (
       
       <SafeAreaView style={{flex: 1}}>      
       <View style={styles.container}>
         <View style={styles.profileImageContainer}>
-          <TouchableOpacity onPress={() => navigate('EmployerProfileScreen')}>
+          <TouchableOpacity onPress={this.handleNavigate()}>
             <Image source={require('./assets/ProfilePic.png')} style={styles.profileImageStyle} />
             <View>
               <Text> Name </Text>        

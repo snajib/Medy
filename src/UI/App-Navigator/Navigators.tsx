@@ -8,8 +8,8 @@ import {
   NavigationEvents
 } from "react-navigation";
 import {
-  SafeAreaView, 
-  ScrollView, 
+  SafeAreaView,
+  ScrollView,
   Button,
   View,
   Text,
@@ -18,7 +18,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity
-} from 'react-native';
+} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { EmployerPostingsScreen } from "../Screens/EmployerPostingsScreen";
 import { EmployerMoreScreen } from "../Screens/EmployerMoreScreen";
@@ -31,49 +31,6 @@ import { EmployerHistoryScreen } from "../Screens/EmployerHistoryScreen";
 import { EmployerHelpScreen } from "../Screens/EmployerHelpScreen";
 import { CustomDrawerComponent } from "../../../CustomDrawerComponent";
 import { TabNavigator } from "./Tab/tab-navigator-configuration";
-
-const getTabBarIcon = (navigation, focused, tintColor) => {
-  const { routeName } = navigation.state;
-  let IconComponent = Ionicons;
-  let iconName;
-
-  if (routeName === "Home") {
-    iconName = "ios-home";
-  } else if (routeName === "Postings") {
-    iconName = "ios-clipboard";
-  } else if (routeName === "Finder") {
-    iconName = "ios-search";
-  } else if (routeName === "More") {
-    iconName = "ios-more";
-  }
-
-  return <IconComponent name={iconName} size={25} color={tintColor} />;
-};
-
-/*
-const TabNavigator = createBottomTabNavigator(
-  {
-    Home: { screen: EmployerHomeScreen },
-    Finder: { screen: EmployerFinderScreen },
-    Postings: { screen: EmployerPostingsScreen },
-    More: { screen: EmployerMoreScreen }
-  },
-  {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({ focused, tintColor }) =>
-        getTabBarIcon(navigation, focused, tintColor)
-    }),
-    
-    tabBarOptions: {
-      style: { paddingBottom: 10, height: 70 },
-      activeTintColor: "black",
-      inactiveTintColor: "gray"
-    }
-  }
-);
-*/
-//Stack for putting into drawer, will use to navigate inside 
-//Custom component
 
 /* EXPLANATION FOR SAMMY
   This stack is used in the DrawerNavigator to help render the Profile Screen. The only way for a touchOpacity tag 
@@ -102,32 +59,34 @@ const DrawerStackNavigator = createStackNavigator({
   EmployerHelpScreen,
   */
   EmployerProfileScreen
-})
-
-const DrawerNavigator = createDrawerNavigator({
-
-  Home: { screen: TabNavigator},
-  Account: { screen: EmployerAccountScreen },
-  History: { screen: EmployerHistoryScreen },
-  Settings: { screen: EmployerSettingsScreen },
-  Help: { screen: EmployerHelpScreen },
-  DrawerStackNavigator
-}, {
-  contentComponent: props => <CustomDrawerComponent {...props} />
 });
+
+const DrawerNavigator = createDrawerNavigator(
+  {
+    Home: { screen: TabNavigator },
+    Account: { screen: EmployerAccountScreen },
+    History: { screen: EmployerHistoryScreen },
+    Settings: { screen: EmployerSettingsScreen },
+    Help: { screen: EmployerHelpScreen },
+    DrawerStackNavigator
+  },
+  {
+    contentComponent: props => <CustomDrawerComponent {...props} />
+  }
+);
 
 const ProfileImageStyle: ImageStyle = {
   height: 120,
-  width: 120, 
+  width: 120,
   borderRadius: 60
-}
+};
 
 const ProfileImageContainer: ViewStyle = {
-  flexDirection: 'row',
-  height: 150, 
-  backgroundColor: 'white', 
-  alignItems: 'center',
-  justifyContent: 'center'
+  flexDirection: "row",
+  height: 150,
+  backgroundColor: "white",
+  alignItems: "center",
+  justifyContent: "center"
 };
 
 const styles = StyleSheet.create({
