@@ -1,22 +1,12 @@
 import React from "react";
-import {
-  createBottomTabNavigator,
-  createAppContainer,
-  createDrawerNavigator,
-  createStackNavigator,
-  DrawerItems,
-  NavigationEvents
-} from "react-navigation";
-
+import {DrawerItems} from "react-navigation";
 import {
   View,
   Text,
   Image,
   TouchableOpacity,
   StyleSheet,
-  Platform,
   SafeAreaView,
-  
 } from "react-native";
 
 export class CustomDrawerComponent extends React.Component {
@@ -111,18 +101,6 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontSize: 15,
     fontWeight: '100'
-  },
-  imageTopRow: {
-    height: 20,
-    width: 20,
-    ...Platform.select({
-      ios: {
-        borderRadius: 20 / 2
-      },
-      android: {
-        borderRadius: 10
-      }
-    })
   },
   icon: {
     height: 25,
