@@ -20,15 +20,15 @@ import {
   TouchableOpacity
 } from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { EmployerPostingsScreen } from "./Screens/EmployerPostingsScreen";
-import { EmployerMoreScreen } from "./Screens/EmployerMoreScreen";
-import { EmployerFinderScreen } from "./Screens/EmployerFinderScreen";
-import { EmployerHomeScreen } from "./Screens/EmployerHomeScreen";
-import { EmployerAccountScreen } from "./Screens/EmployerAccountScreen";
-import { EmployerProfileScreen } from "./Screens/EmployerProfileScreen";
-import { EmployerSettingsScreen } from "./Screens/EmployerSettingsScreen";
-import { EmployerHistoryScreen } from "./Screens/EmployerHistoryScreen";
-import { EmployerHelpScreen } from "./Screens/EmployerHelpScreen";
+import { EmployerPostingsScreen } from "./src/UI/Screens/EmployerPostingsScreen";
+import { EmployerMoreScreen } from "./src/UI/Screens/EmployerMoreScreen";
+import { EmployerFinderScreen } from "./src/UI/Screens/EmployerFinderScreen";
+import { EmployerHomeScreen } from "./src/UI/Screens/EmployerHomeScreen";
+import { EmployerAccountScreen } from "./src/UI/Screens/EmployerAccountScreen";
+import { EmployerProfileScreen } from "./src/UI/Screens/EmployerProfileScreen";
+import { EmployerSettingsScreen } from "./src/UI/Screens/EmployerSettingsScreen";
+import { EmployerHistoryScreen } from "./src/UI/Screens/EmployerHistoryScreen";
+import { EmployerHelpScreen } from "./src/UI/Screens/EmployerHelpScreen";
 import { CustomDrawerComponent } from "./CustomDrawerComponent";
 
 const getTabBarIcon = (navigation, focused, tintColor) => {
@@ -61,9 +61,12 @@ const TabNavigator = createBottomTabNavigator(
       tabBarIcon: ({ focused, tintColor }) =>
         getTabBarIcon(navigation, focused, tintColor)
     }),
-    
+
     tabBarOptions: {
-      style: { paddingBottom: 10, height: 70 },
+      style: {
+        height: 60,
+        paddingTop: 10
+      },
       activeTintColor: "black",
       inactiveTintColor: "gray"
     }
