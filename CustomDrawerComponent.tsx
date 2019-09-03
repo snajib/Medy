@@ -11,7 +11,7 @@ import {
 
 export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
   public handleNavigate = () => () => {
-    this.props.navigation.navigate("EmployerProfileScreen");
+    this.props.navigation.navigate("Profile");
     return;
   };
 

@@ -6,10 +6,13 @@ import {
   EmployerMoreScreen
 } from "../../Screens";
 import { names, screenNames } from "../route-config";
-import { stackNavigatorTabOptions } from "./stack-navigator-tab-options";
+import { stackNavigatorOptions } from "./stack-navigator-tab-options";
 
-const screenRoutes = (routeName, screen) => ({
-  [screenNames(routeName)]: { screen }
+const screenRoutes = (routeName, screenName) => ({
+  [screenNames(routeName)]: {
+    screen: screenName,
+    ...stackNavigatorOptions
+  }
 });
 
 /* 
@@ -19,10 +22,9 @@ const screenRoutes = (routeName, screen) => ({
     of all the stacks in the tab navigator, change it here
 
 */
-const tabStackNavigator = (route, initialRouteName) =>
+const tabStackNavigator = (route, initialRoute) =>
   createStackNavigator(route, {
-    initialRouteName,
-    headerMode: "none"
+    initialRouteName: initialRoute
   });
 
 //TODO: Create one for Drawer
