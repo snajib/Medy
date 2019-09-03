@@ -6,7 +6,10 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView
+  SafeAreaView,
+  ViewStyle,
+  TextStyle,
+  ImageStyle
 } from "react-native";
 
 export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
@@ -25,14 +28,60 @@ export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
                 source={require("./assets/ProfilePic.png")}
                 style={styles.profileImageStyle}
               />
-              <View>
-                <Text> Name </Text>
+              <View style={styles.textProfile}>
+                <Text style={{ fontWeight: "bold" }}> Name </Text>
                 <Text> Job </Text>
               </View>
             </TouchableOpacity>
           </View>
-          <View style={styles.containerBottom}>
+          <View style={{ backgroundColor: "white" }}>
             <DrawerItems {...this.props} />
+            {/*
+          <TouchableOpacity
+            onPress={() => navigate('TabNavigator')}
+            style={styles.containerBottomItem}
+          >
+            <View style={styles.button}>
+              <Text style={styles.txtBottom}>Home</Text>
+            </View>
+          </TouchableOpacity>
+    
+          <TouchableOpacity
+            onPress={() => navigate('EmployerAccountScreen')}
+            style={styles.containerBottomItem}
+          >
+            <View style={styles.button}>
+              <Text style={styles.txtBottom}>Account</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigate('EmployerHistoryScreen')}
+            style={styles.containerBottomItem}
+          >
+            <View style={styles.button}>
+              <Text style={styles.txtBottom}>History</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigate('EmployerSettingsScreen')}
+            style={styles.containerBottomItem}
+          >
+            <View style={styles.button}>
+              <Text style={styles.txtBottom}>Settings</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigate('EmployerHelpScreen')}
+            style={styles.containerBottomItem}
+          >
+            <View style={styles.button}>
+              <Text style={styles.textBottom}>Help</Text>
+            </View>
+          </TouchableOpacity>
+          */}
           </View>
         </View>
       </SafeAreaView>
@@ -40,60 +89,40 @@ export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
   }
 }
 
+const container: ViewStyle = {
+  flex: 1,
+  backgroundColor: "#ffffff"
+};
+
+const profileImageContainer: ViewStyle = {
+  display: "flex",
+  flexDirection: "row",
+  height: 150,
+  backgroundColor: "white",
+  alignItems: "flex-start",
+  justifyContent: "flex-start"
+};
+
+const profileImageStyle: ImageStyle = {
+  alignSelf: "flex-start",
+  flex: 1,
+  height: 120,
+  width: 120,
+  borderRadius: 60,
+  paddingTop: 75,
+  marginLeft: 20
+};
+
+const textProfile: ImageStyle = {
+  alignSelf: "flex-end",
+  flex: 2,
+  marginLeft: 150,
+  marginTop: -75
+};
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#ffffff"
-  },
-  containertopRow: {
-    marginTop: 10,
-    marginLeft: 10,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  txtBottom: {
-    marginLeft: 10,
-    color: "#000000",
-    fontSize: 15,
-    fontWeight: "100"
-  },
-  icon: {
-    height: 25,
-    width: 25,
-    marginRight: 10
-  },
-  button: {
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "flex-start"
-  },
-
-  containertopRowText: {
-    flexDirection: "column",
-    marginLeft: 5
-  },
-
-  containerBottom: {
-    backgroundColor: "#ffffff"
-  },
-  containerBottomItem: {
-    padding: 10,
-    alignItems: "center",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    borderBottomColor: "#000000",
-    borderBottomWidth: 0.5
-  },
-  profileImageStyle: {
-    height: 120,
-    width: 120,
-    borderRadius: 60
-  },
-  profileImageContainer: {
-    flexDirection: "row",
-    height: 150,
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center"
-  }
+  container,
+  profileImageContainer,
+  profileImageStyle,
+  textProfile
 });
