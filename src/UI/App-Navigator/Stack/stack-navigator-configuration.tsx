@@ -1,24 +1,18 @@
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator } from "react-navigation";
 import {
-    EmployerHomeScreen,
-    EmployerFinderScreen,
-    EmployerPostingsScreen,
-    EmployerCalenderScreen,
-    EmployerMoreScreen,
-    EmployerProfileScreen,
-    EmployerAccountScreen,
-    EmployerHistoryScreen,
-    EmployerSettingsScreen,
-    EmployerHelpScreen
-} from "../../Screens"
-import {
-    names,
-    screenNames
-} from "../route-config"
-import { stackNavigatorTabOptions } from "./stack-navigator-tab-options";
+  EmployerHomeScreen,
+  EmployerFinderScreen,
+  EmployerPostingsScreen,
+  EmployerMoreScreen
+} from "../../Screens";
+import { names, screenNames } from "../route-config";
+import { stackNavigatorOptions } from "./stack-navigator-tab-options";
 
-const screenRoutes = (routeName, screen) => ({
-    [screenNames(routeName)]: { screen }
+const screenRoutes = (routeName, screenName) => ({
+  [screenNames(routeName)]: {
+    screen: screenName,
+    ...stackNavigatorOptions
+  }
 });
 
 /* 
@@ -28,13 +22,10 @@ const screenRoutes = (routeName, screen) => ({
     of all the stacks in the tab navigator, change it here
 
 */
-const tabStackNavigator = (route, initialRouteName) =>
-    createStackNavigator(
-        route,
-        { 
-            initialRouteName
-        },
-    );
+const tabStackNavigator = (route, initialRoute) =>
+  createStackNavigator(route, {
+    initialRouteName: initialRoute
+  });
 
 //TODO: Create one for Drawer
 
@@ -54,29 +45,39 @@ const tabStackNavigator = (route, initialRouteName) =>
         ...screenRoutes(names._____, Employer____Screen)
     }
 */
-const homeStackRoutes = 
-    screenRoutes(names.EmployerHome, EmployerHomeScreen);
-const finderStackRoutes =
-    screenRoutes(names.EmployerFinder, EmployerFinderScreen);
-const postingsStackRoutes =
-    screenRoutes(names.EmployerPostings, EmployerPostingsScreen);
-const moreStackRoutes =
-    screenRoutes(names.EmployerMore, EmployerMoreScreen);
+const homeStackRoutes = screenRoutes(names.EmployerHome, EmployerHomeScreen);
+const finderStackRoutes = screenRoutes(
+  names.EmployerFinder,
+  EmployerFinderScreen
+);
+const postingsStackRoutes = screenRoutes(
+  names.EmployerPostings,
+  EmployerPostingsScreen
+);
+const moreStackRoutes = screenRoutes(names.EmployerMore, EmployerMoreScreen);
 
-const tabHomeStackNavigator = 
-    tabStackNavigator(homeStackRoutes, screenNames(names.EmployerHome));
-const tabFinderStackNavigator =
-    tabStackNavigator(finderStackRoutes, screenNames(names.EmployerFinder));
-const tabPostingsStackNavigator =
-    tabStackNavigator(postingsStackRoutes,screenNames(names.EmployerPostings));
-const tabMoreStackNavigator =
-    tabStackNavigator(moreStackRoutes, screenNames(names.EmployerMore));
+const tabHomeStackNavigator = tabStackNavigator(
+  homeStackRoutes,
+  screenNames(names.EmployerHome)
+);
+const tabFinderStackNavigator = tabStackNavigator(
+  finderStackRoutes,
+  screenNames(names.EmployerFinder)
+);
+const tabPostingsStackNavigator = tabStackNavigator(
+  postingsStackRoutes,
+  screenNames(names.EmployerPostings)
+);
+const tabMoreStackNavigator = tabStackNavigator(
+  moreStackRoutes,
+  screenNames(names.EmployerMore)
+);
 
 export const tabStack = {
-    Home: tabHomeStackNavigator,
-    Finder: tabFinderStackNavigator,
-    Postings: tabPostingsStackNavigator,
-    More: tabMoreStackNavigator
-}
+  Home: tabHomeStackNavigator,
+  Finder: tabFinderStackNavigator,
+  Postings: tabPostingsStackNavigator,
+  More: tabMoreStackNavigator
+};
 
 //TODO: Create drawer stack navigators
