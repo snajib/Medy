@@ -1,18 +1,23 @@
 import { createStackNavigator } from "react-navigation";
 import {
-  EmployerHomeScreen,
-  EmployerFinderScreen,
-  EmployerPostingsScreen,
-  EmployerMoreScreen
+   EmployerHomeScreen,
+   EmployerFinderScreen,
+   EmployerPostingsScreen,
+   EmployerMoreScreen,
+   EmployerProfileScreen,
+   EmployerAccountScreen,
+   EmployerHistoryScreen,
+   EmployerSettingsScreen,
+   EmployerHelpScreen
 } from "../../Screens";
 import { names, screenNames } from "../route-config";
 import { stackNavigatorOptions } from "./stack-navigator-tab-options";
 
 const screenRoutes = (routeName, screenName) => ({
-  [screenNames(routeName)]: {
-    screen: screenName,
-    ...stackNavigatorOptions
-  }
+   [screenNames(routeName)]: {
+      screen: screenName,
+      ...stackNavigatorOptions
+   }
 });
 
 /* 
@@ -23,9 +28,9 @@ const screenRoutes = (routeName, screenName) => ({
 
 */
 const tabStackNavigator = (route, initialRoute) =>
-  createStackNavigator(route, {
-    initialRouteName: initialRoute
-  });
+   createStackNavigator(route, {
+      initialRouteName: initialRoute
+   });
 
 //TODO: Create one for Drawer
 
@@ -45,39 +50,85 @@ const tabStackNavigator = (route, initialRoute) =>
         ...screenRoutes(names._____, Employer____Screen)
     }
 */
-const homeStackRoutes = screenRoutes(names.EmployerHome, EmployerHomeScreen);
-const finderStackRoutes = screenRoutes(
-  names.EmployerFinder,
-  EmployerFinderScreen
+const employerHomeStackRoutes = screenRoutes(
+   names.EmployerHome,
+   EmployerHomeScreen
 );
-const postingsStackRoutes = screenRoutes(
-  names.EmployerPostings,
-  EmployerPostingsScreen
+const employerFinderStackRoutes = screenRoutes(
+   names.EmployerFinder,
+   EmployerFinderScreen
 );
-const moreStackRoutes = screenRoutes(names.EmployerMore, EmployerMoreScreen);
+const employerPostingsStackRoutes = screenRoutes(
+   names.EmployerPostings,
+   EmployerPostingsScreen
+);
+const employerMoreStackRoutes = screenRoutes(
+   names.EmployerMore,
+   EmployerMoreScreen
+);
 
-const tabHomeStackNavigator = tabStackNavigator(
-  homeStackRoutes,
-  screenNames(names.EmployerHome)
+const employerTabHomeStackNavigator = tabStackNavigator(
+   employerHomeStackRoutes,
+   screenNames(names.EmployerHome)
 );
-const tabFinderStackNavigator = tabStackNavigator(
-  finderStackRoutes,
-  screenNames(names.EmployerFinder)
+const employerTabFinderStackNavigator = tabStackNavigator(
+   employerFinderStackRoutes,
+   screenNames(names.EmployerFinder)
 );
-const tabPostingsStackNavigator = tabStackNavigator(
-  postingsStackRoutes,
-  screenNames(names.EmployerPostings)
+const employerTabPostingsStackNavigator = tabStackNavigator(
+   employerPostingsStackRoutes,
+   screenNames(names.EmployerPostings)
 );
-const tabMoreStackNavigator = tabStackNavigator(
-  moreStackRoutes,
-  screenNames(names.EmployerMore)
+const employerTabMoreStackNavigator = tabStackNavigator(
+   employerMoreStackRoutes,
+   screenNames(names.EmployerMore)
 );
 
 export const tabStack = {
-  Home: tabHomeStackNavigator,
-  Finder: tabFinderStackNavigator,
-  Postings: tabPostingsStackNavigator,
-  More: tabMoreStackNavigator
+   Home: employerTabHomeStackNavigator,
+   Finder: employerTabFinderStackNavigator,
+   Postings: employerTabPostingsStackNavigator,
+   More: employerTabMoreStackNavigator
 };
 
-//TODO: Create drawer stack navigators
+const employerAccountStackRoutes = screenRoutes(
+   names.EmployerAccount,
+   EmployerAccountScreen
+);
+const employerHistoryStackRoutes = screenRoutes(
+   names.EmployerHistory,
+   EmployerHistoryScreen
+);
+const employerSettingsStackRoutes = screenRoutes(
+   names.EmployerSettings,
+   EmployerSettingsScreen
+);
+const employerHelpStackRoutes = screenRoutes(
+   names.EmployerHelp,
+   EmployerHelpScreen
+);
+const employerProfileStackRoutes = screenRoutes(
+   names.EmployerProfile,
+   EmployerProfileScreen
+);
+
+export const employerDrawerAccountStackNavigator = tabStackNavigator(
+   employerAccountStackRoutes,
+   screenNames(names.EmployerAccount)
+);
+export const employerDrawerHistoryStackNavigator = tabStackNavigator(
+   employerHistoryStackRoutes,
+   screenNames(names.EmployerHistory)
+);
+export const employerDrawerSettingsStackNavigator = tabStackNavigator(
+   employerSettingsStackRoutes,
+   screenNames(names.EmployerSettings)
+);
+export const employerDrawerHelpStackNavigator = tabStackNavigator(
+   employerHelpStackRoutes,
+   screenNames(names.EmployerHelp)
+);
+export const employerDrawerProfileStackNavigator = tabStackNavigator(
+   employerProfileStackRoutes,
+   screenNames(names.EmployerProfile)
+);
