@@ -1,19 +1,19 @@
 import React from "react";
-import { StyleSheet, Text, View, ViewStyle, TextStyle } from "react-native";
-import {
-  createStackNavigator,
-  createAppContainer,
-  createBottomTabNavigator
-} from "react-navigation";
-import { LinearGradient } from "expo-linear-gradient";
+import { Gradient } from "../Shared/linear-gradient";
+import { View, Text } from "react-native";
+import { styles } from "../Shared/styles";
 
 export class EmployerAccountScreen extends React.Component {
-    render() {
-        return (
-            <View>
-                <Text>Account Screen</Text>
+   render() {
+      return (
+         <View style={styles.topContainterStyle}>
+            <Gradient></Gradient>
+            <View style={styles.mainCardStyle}>
+               <View style={styles.centerText}>
+                  <Text> Account </Text>
+               </View>
             </View>
-        )
-    }
+         </View>
+      );
+   }
 }
-
