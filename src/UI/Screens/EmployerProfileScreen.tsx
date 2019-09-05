@@ -4,16 +4,16 @@ import { View, Text } from "react-native";
 import { styles } from "../Shared/styles";
 
 export class EmployerProfileScreen extends React.Component {
-   render() {
-      return (
-         <View style={styles.topContainterStyle}>
-            <Gradient></Gradient>
-            <View style={styles.mainCardStyle}>
-               <View style={styles.centerText}>
-                  <Text> Profile </Text>
-               </View>
-            </View>
-         </View>
-      );
-   }
+  render() {
+    return (
+      <View style={styles.topContainterStyle}>
+        <Gradient></Gradient>
+        <View style={styles.finderDefaultCardStyle}>
+          <View style={styles.centerText}>
+            <Text> Profile </Text>
+          </View>
+        </View>
+      </View>
+    );
+  }
 }

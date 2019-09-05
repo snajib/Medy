@@ -7,7 +7,7 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "noEmplicitAny": true,
+    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
