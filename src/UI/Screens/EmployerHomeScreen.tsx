@@ -1,21 +1,18 @@
 import React from "react";
 import { Gradient } from "../Shared/linear-gradient";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import { styles } from "../Shared/styles";
+import { VerticalScroll } from "../Shared/vertical-scroll";
 
 export class EmployerHomeScreen extends React.Component {
-   render() {
-      return (
-         <View style={styles.topContainterStyle}>
-            <Gradient></Gradient>
-            <View style={styles.mainCardStyle}>
-               <View style={styles.centerText}>
-                  <Text> Home </Text>
-               </View>
-            </View>
-         </View>
-      );
-   }
+  render() {
+    return (
+      <View style={styles.topContainterStyle}>
+        <Gradient />
+        <VerticalScroll />
+      </View>
+    );
+  }
 }
 
 /*TODO: Find a way to create a stack for each screen
