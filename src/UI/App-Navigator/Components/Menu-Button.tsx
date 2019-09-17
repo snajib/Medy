@@ -1,7 +1,11 @@
-import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import React from 'react';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export const HeaderButton = (iconName, color, onPress) => (
+export const HeaderButton = (
+  iconName: string,
+  color: string,
+  onPress: () => void,
+) => (
   <Ionicons
     name={iconName}
     size={30}
@@ -11,4 +15,4 @@ export const HeaderButton = (iconName, color, onPress) => (
 );
 
 export const MenuButton = navigation =>
-  HeaderButton("ios-menu", "white", () => navigation.openDrawer());
+  HeaderButton('ios-menu', 'white', () => navigation.openDrawer());
