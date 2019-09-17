@@ -1,5 +1,6 @@
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { NavigationComponent } from 'react-navigation';
 
 export const HeaderButton = (
   iconName: string,
@@ -14,5 +15,5 @@ export const HeaderButton = (
   />
 );
 
-export const MenuButton = navigation =>
+export const MenuButton = (navigation: NavigationComponent) =>
   HeaderButton('ios-menu', 'white', () => navigation.openDrawer());
