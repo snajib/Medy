@@ -8,7 +8,7 @@ export class VerticalScroll extends React.Component {
   public renderCards: () => React.ReactNode = () => {
     return cardList.map(card => {
       return (
-        <View style={styles.homeSandwichCardStyle}>
+        <View key={card} style={styles.homeSandwichCardStyle}>
           <View style={styles.centerText}>
             <Text>{card}</Text>
           </View>
