@@ -25,8 +25,8 @@ const getTabBarIcon = (navigation: NavigationComponent, tintColor: string) => {
 };
 
 export const tabBarOptions = {
-  defaultNavigationOptions: (navigation: NavigationComponent) => ({
-    tabBarIcon: (tintColor: string) => getTabBarIcon(navigation, tintColor),
+  defaultNavigationOptions: ({ navigation }: NavigationComponent) => ({
+    tabBarIcon: ({ tintColor }: any) => getTabBarIcon(navigation, tintColor),
   }),
 
   tabBarOptions: {
