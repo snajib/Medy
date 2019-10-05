@@ -7,13 +7,13 @@ export const HeaderButton = (
   color: string,
   onPress: () => void,
 ) => (
-  <Ionicons
-    name={iconName}
-    size={30}
-    style={{ paddingHorizontal: 15, color }}
-    onPress={onPress}
-  />
-);
+    <Ionicons
+      name={iconName}
+      size={30}
+      style={{ paddingHorizontal: 15, color }}
+      onPress={onPress}
+    />
+  );
 
 export const MenuButton = (navigation: NavigationComponent) =>
   HeaderButton('ios-menu', 'white', () => navigation.openDrawer());
