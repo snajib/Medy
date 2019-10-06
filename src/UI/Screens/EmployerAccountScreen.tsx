@@ -6,11 +6,11 @@ import { styles } from "../Shared/styles";
 export class EmployerAccountScreen extends React.Component {
   render() {
     return (
-      <View style={styles.topContainterStyle}>
+      <View style={styles.topPrimaryContainterStyle}>
         <Gradient></Gradient>
-        <View style={styles.finderDefaultCardStyle}>
-          <View style={styles.centerText}>
-            <Text> Account </Text>
+        <View style={styles.topSecondaryContainerStyle}>
+          <Text style={styles.titleText}>Account</Text>
+          <View style={styles.wholeDefaultCardStyle}>
           </View>
         </View>
       </View>

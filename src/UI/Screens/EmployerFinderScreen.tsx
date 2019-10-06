@@ -7,7 +7,7 @@ import { HorizontalScroll } from "../Shared/horizontal-scroll";
 export class EmployerFinderScreen extends React.Component {
   render() {
     return (
-      <View style={styles.topContainterStyle}>
+      <View style={styles.topPrimaryContainterStyle}>
         <Gradient />
         <HorizontalScroll />
       </View>

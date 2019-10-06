@@ -6,11 +6,11 @@ import { styles } from "../Shared/styles";
 export class EmployerCalenderScreen extends React.Component {
   render() {
     return (
-      <View style={styles.topContainterStyle}>
+      <View style={styles.topPrimaryContainterStyle}>
         <Gradient></Gradient>
-        <View style={styles.finderDefaultCardStyle}>
-          <View style={styles.centerText}>
-            <Text> Calender </Text>
+        <View style={styles.topSecondaryContainerStyle}>
+          <Text style={styles.titleText}>Calender</Text>
+          <View style={styles.wholeDefaultCardStyle}>
           </View>
         </View>
       </View>

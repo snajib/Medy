@@ -1,19 +1,44 @@
-import { StyleSheet, ViewStyle, Dimensions } from "react-native";
+import { StyleSheet, ViewStyle, Dimensions, TextStyle } from "react-native";
 
 export const width = Dimensions.get("window").width;
 export const height = Dimensions.get("window").height;
 
-const topContainterStyle: ViewStyle = {
+const topPrimaryContainterStyle: ViewStyle = {
   flex: 1,
   backgroundColor: "#5F44BA",
   alignItems: "center"
 };
+
+const topSecondaryContainerStyle: ViewStyle = {
+  flex: 1,
+  marginTop: '22%',
+}
 
 const centerText: ViewStyle = {
   flex: 1,
   alignItems: "center",
   justifyContent: "center"
 };
+
+const titleText: TextStyle = {
+  fontSize: 36,
+  fontStyle: 'normal',
+  fontWeight: 'bold',
+  textAlign: 'left',
+  color: '#fff',
+  paddingLeft: '3.5%'
+}
+
+const wholeDefaultCardStyle: ViewStyle = {
+  backgroundColor: "#fff",
+  borderRadius: 12,
+  marginTop: 10,
+  marginLeft: 0,
+  marginRight: 0,
+  marginBottom: 0,
+  height: height,
+  width: width
+}
 
 const finderDefaultCardStyle: ViewStyle = {
   backgroundColor: "#fff",
@@ -42,8 +67,11 @@ const homeSandwichCardStyle: ViewStyle = {
 };
 
 export const styles = StyleSheet.create({
-  topContainterStyle,
+  topPrimaryContainterStyle,
+  topSecondaryContainerStyle,
   finderDefaultCardStyle,
   centerText,
-  homeSandwichCardStyle
+  titleText,
+  homeSandwichCardStyle,
+  wholeDefaultCardStyle
 });
