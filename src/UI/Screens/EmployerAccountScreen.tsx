@@ -1,7 +1,9 @@
 import React from "react";
 import { Gradient } from "../Shared/linear-gradient";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { styles } from "../Shared/styles";
+import { Accordion } from "../Shared/accordion";
+import { accountOptions } from "../Shared/accordion-schemas";
 
 export class EmployerAccountScreen extends React.Component {
   render() {
@@ -11,6 +13,9 @@ export class EmployerAccountScreen extends React.Component {
         <View style={styles.topSecondaryContainerStyle}>
           <Text style={styles.titleText}>Account</Text>
           <View style={styles.wholeDefaultCardStyle}>
+            <ScrollView>
+              <Accordion schema={accountOptions}></Accordion>
+            </ScrollView>
           </View>
         </View>
       </View>
