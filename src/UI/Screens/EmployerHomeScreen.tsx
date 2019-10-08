@@ -7,7 +7,7 @@ import { VerticalScroll } from "../Shared/vertical-scroll";
 export class EmployerHomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.topContainterStyle}>
+      <View style={styles.topPrimaryContainterStyle}>
         <Gradient />
         <VerticalScroll />
       </View>
@@ -19,7 +19,7 @@ export class EmployerHomeScreen extends React.Component {
    Anything that transitions from the original page of the tab to a separate
    page within the original page of a tab requires a stack
 
-   Exs. 
+   Exs.
       Super list inside of Findings tab
       View posting inquiries inside of Postings tab
       View employee cards or QR codes from Calender tab
