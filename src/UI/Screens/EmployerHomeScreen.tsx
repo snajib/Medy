@@ -1,7 +1,7 @@
 import React from "react";
 import { Gradient } from "../Shared/linear-gradient";
 import { View } from "react-native";
-import { styles } from "../Shared/styles";
+import { styles, height } from "../Shared/styles";
 import { VerticalScroll } from "../Shared/vertical-scroll";
 
 export class EmployerHomeScreen extends React.Component {
@@ -9,7 +9,10 @@ export class EmployerHomeScreen extends React.Component {
     return (
       <View style={styles.topPrimaryContainterStyle}>
         <Gradient />
-        <VerticalScroll />
+        <VerticalScroll
+          style={styles.homeSandwichCardStyle}
+          schema={["Calender", "Statistics", "Performance"]}
+          snapToInterval={height - 500} />
       </View>
     );
   }

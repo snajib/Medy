@@ -66,6 +66,18 @@ const homeSandwichCardStyle: ViewStyle = {
   marginBottom: 40
 };
 
+const finderSandwichCardStyle: ViewStyle = {
+  backgroundColor: "#fff",
+  borderRadius: 12,
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 3 },
+  shadowOpacity: 0.8,
+  shadowRadius: 3,
+  height: height - 650,
+  width: width - 100,
+  marginBottom: 40
+}
+
 const topAccordionContainer: ViewStyle = {
   paddingLeft: "5%",
   paddingTop: "2.5%"
@@ -96,6 +108,7 @@ export const styles = StyleSheet.create({
   centerText,
   titleText,
   homeSandwichCardStyle,
+  finderSandwichCardStyle,
   wholeDefaultCardStyle,
   topAccordionContainer,
   accordionSectionLabel,

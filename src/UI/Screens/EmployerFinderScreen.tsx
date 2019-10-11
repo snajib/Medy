@@ -9,7 +9,9 @@ export class EmployerFinderScreen extends React.Component {
     return (
       <View style={styles.topPrimaryContainterStyle}>
         <Gradient />
-        <HorizontalScroll />
+        <HorizontalScroll
+          style={styles.finderDefaultCardStyle}
+          schema={["Profile 1", "Profile 2", "Profile 3", "Profile 4", "Profile 5"]} />
       </View>
     );
   }
