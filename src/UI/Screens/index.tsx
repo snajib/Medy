@@ -4,6 +4,7 @@ export { EmployerFinderScreen } from "./EmployerFinderScreen";
 export { EmployerPostingsScreen } from "./EmployerPostingsScreen";
 export { EmployerMoreScreen } from "./EmployerMoreScreen";
 export { EmployerCalenderScreen } from "./EmployerCalenderScreen";
+export { EmployerFinderSandwichScreen } from "./EmployerFinderSandwichScreen"
 
 //Drawer Screens
 export { EmployerProfileScreen } from "./EmployerProfileScreen";

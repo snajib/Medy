@@ -2,8 +2,8 @@ import React from "react";
 import { Gradient } from "../Shared/linear-gradient";
 import { View, Text, ScrollView } from "react-native";
 import { styles } from "../Shared/styles";
-import { Accordion } from "../Shared/accordion";
-import { historyOptions } from "../Shared/accordion-schemas";
+import { Accordion } from "../Shared/Accordion/accordion";
+import { historyOptions } from "../Shared/Accordion/accordion-schemas";
 
 export class EmployerHistoryScreen extends React.Component {
   render() {

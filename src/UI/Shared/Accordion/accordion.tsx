@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { AccordionSection } from "./accordion-section";
-import { styles } from "./styles";
+import { styles } from "../styles";
 
 interface Props {
     schema: string[]

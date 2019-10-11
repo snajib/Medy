@@ -2,8 +2,8 @@ import React from "react";
 import { Gradient } from "../Shared/linear-gradient";
 import { View, Text, ScrollView } from "react-native";
 import { styles } from "../Shared/styles";
-import { settingsOptions } from "../Shared/accordion-schemas";
-import { Accordion } from "../Shared/accordion";
+import { settingsOptions } from "../Shared/Accordion/accordion-schemas";
+import { Accordion } from "../Shared/Accordion/accordion";
 
 export class EmployerSettingsScreen extends React.Component {
   render() {

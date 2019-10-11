@@ -1,4 +1,4 @@
-import { MenuButton } from '../Components/Menu-Button';
+import { MenuButton, SandwichButton, RegularButton } from '../Components/Menu-Button';
 import { NavigationComponent } from 'react-navigation';
 
 export const stackNavigatorOptions = {
@@ -7,3 +7,19 @@ export const stackNavigatorOptions = {
     headerTransparent: 'true',
   }),
 };
+
+export const finderRegularStackNavigatorOptions = {
+  navigationOptions: ({ navigation }: NavigationComponent) => ({
+    headerLeft: MenuButton(navigation),
+    headerRight: RegularButton(navigation),
+    headerTransparent: 'true'
+  })
+}
+
+export const finderSandwichStackNavigatorOptions = {
+  navigationOptions: ({ navigation }: NavigationComponent) => ({
+    headerLeft: MenuButton(navigation),
+    headerRight: SandwichButton(navigation),
+    headerTransparent: 'true'
+  })
+}
