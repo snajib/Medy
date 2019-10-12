@@ -85,7 +85,7 @@ const sectionActive: ViewStyle = {
 }
 
 const sectionInActive: ViewStyle = {
-  height: '0%',
+  height: 0,
   overflow: 'hidden'
 }
 

@@ -3,19 +3,25 @@ import { Text, View } from "react-native";
 import { AccordionSection } from "./accordion-section";
 import { styles } from "./styles";
 
-interface Props {
+export interface IAccordianProps {
     schema: string[]
 }
 
-export class Accordion extends React.Component<Props> {
+function accordianSectionClick(active?: boolean): boolean {
+    return active = !active;
+}
+
+export class Accordion extends React.Component<IAccordianProps> {
 
     public renderSections(list: string[]) {
         return list.map(section => {
             return (
                 <AccordionSection
+                    active={}
+                    onClick={accordianSectionClick}
                     labelText={styles.accordionSectionLabel}
                     title={section}>
-                    <Text>abc</Text>
+                    <Text>accordion content</Text>
                 </AccordionSection>
             )
         })
