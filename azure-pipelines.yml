@@ -22,3 +22,7 @@ steps:
 - script: 
     npm install npm -g
   displayName: 'install node modules'
+
+- script: 
+    npm start
+  displayName: 'compile code'
