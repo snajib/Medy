@@ -14,32 +14,11 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-# - task: geeklearningio.gl-vsts-tasks-yarn-dev.yarn-installer-task.YarnInstaller@3
-#   displayName: 'Use Yarn 1.17.x'
-#   inputs:
-#     versionSpec: 1.17.x
-#     checkLatest: true
-#     includePrerelease: true
-
-# steps:
-# - task: NodeTool@0
-#   inputs:
-#     versionSpec: '10.x'
-#   displayName: 'Install Node.js'
 
 - script:
     yarn
   displayName: 'yarn install packages'
 
-
 - script: 
-    npm install -g expo-cli
-  displayName: 'install expo cli'
-
-- script: 
-    npm install npm -g
-  displayName: 'install node modules'
-
-- script: 
-    npm start
-  displayName: 'compile code'
+    npm build:status
+  displayName: 'build test'
