@@ -19,6 +19,6 @@ steps:
     yarn
   displayName: 'yarn install packages'
 
-- script: 
-    npm build:status
-  displayName: 'build test'
+# - script: 
+#     npm build:status
+#   displayName: 'build test'
