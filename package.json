@@ -1,35 +1,38 @@
 {
-   "main": "node_modules/expo/AppEntry.js",
-   "scripts": {
-      "start": "expo start",
-      "android": "expo start --android",
-      "ios": "expo start --ios",
-      "web": "expo start --web",
-      "eject": "expo eject"
-   },
-   "dependencies": {
-      "@types/react-native-vector-icons": "^6.4.2",
-      "expo": "^34.0.4",
-      "expo-cli": "^3.0.10",
-      "expo-linear-gradient": "^6.0.0",
-      "ionicons": "^4.6.3",
-      "jshint": "^2.10.2",
-      "react": "16.8.3",
-      "react-dom": "^16.8.6",
-      "react-ionicons": "^3.0.1",
-      "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
-      "react-native-gesture-handler": "^1.3.0",
-      "react-native-reanimated": "~1.1.0",
-      "react-native-vector-icons": "^6.6.0",
-      "react-native-web": "^0.11.4",
-      "react-navigation": "^3.11.1",
-      "redux-starter-kit": "^0.8.0"
-   },
-   "devDependencies": {
-      "@types/react": "^16.8.23",
-      "@types/react-native": "^0.57.65",
-      "babel-preset-expo": "^6.0.0",
-      "typescript": "^3.4.5"
-   },
-   "private": true
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "build:status": "expo build:status",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react-native-vector-icons": "^6.4.2",
+    "expo": "^34.0.4",
+    "expo-cli": "^3.0.10",
+    "expo-linear-gradient": "^6.0.0",
+    "ionicons": "^4.6.3",
+    "jshint": "^2.10.2",
+    "react": "16.8.3",
+    "react-dom": "^16.8.6",
+    "react-ionicons": "^3.0.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-reanimated": "~1.1.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.11.4",
+    "react-navigation": "^3.11.1",
+    "redux-starter-kit": "^0.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-native": "^0.57.65",
+    "babel-preset-expo": "^6.0.0",
+    "jest": "^24.9.0",
+    "typescript": "^3.4.5"
+  },
+  "private": true
 }
