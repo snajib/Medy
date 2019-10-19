@@ -1,5 +1,5 @@
-import { AppContainer } from './src/UI/App-Navigator/Drawer/drawer-navigator-configuration';
 import React from 'react';
+import { AppContainer } from './src/UI/App-Navigator/Drawer/drawer-navigator-configuration';
 
 // const AppContainer = createAppContainer(AppNavigator);
 
@@ -11,7 +11,7 @@ export default class App extends React.Component {
   //         NavigationActions.navigate({ routeName: someRouteName }),
   //       );
   //   }
-  render() {
+  public render() {
     return <AppContainer />;
   }
 }

@@ -9,7 +9,8 @@ web-build/
 web-report/
 
 # jest cache
-.jest
+.jest/
+coverage/
 # Expo
 .expo/*
 

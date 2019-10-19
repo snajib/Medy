@@ -2,20 +2,20 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": ["es2017"],
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "module": "commonjs",
-    "strict": true,
-    "declaration": true,
-    "outDir": "dist",
-    "sourceMap": true
-    // "transformIgnorePatterns": true
+    "noUnusedParameters": true
+    // "module": "commonjs",
+    // "strict": true,
+    // "declaration": true,
+    // "outDir": "dist",
+    // "sourceMap": true
+    // // "transformIgnorePatterns": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"],
