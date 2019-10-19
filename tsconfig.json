@@ -9,8 +9,15 @@
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "module": "commonjs",
+    "strict": true,
+    "declaration": true,
+    "outDir": "dist",
+    "sourceMap": true
+    // "transformIgnorePatterns": true
   },
-  "exclude": ["node_modules"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
   "compileOnSave": true
 }
