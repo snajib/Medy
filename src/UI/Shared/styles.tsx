@@ -1,23 +1,23 @@
-import { StyleSheet, ViewStyle, Dimensions, TextStyle } from "react-native";
+import { StyleSheet, ViewStyle, Dimensions, TextStyle } from 'react-native';
 
-export const width = Dimensions.get("window").width;
-export const height = Dimensions.get("window").height;
+export const width = Dimensions.get('window').width;
+export const height = Dimensions.get('window').height;
 
 const topPrimaryContainterStyle: ViewStyle = {
   flex: 1,
-  backgroundColor: "#5F44BA",
-  alignItems: "center"
+  backgroundColor: '#5F44BA',
+  alignItems: 'center',
 };
 
 const topSecondaryContainerStyle: ViewStyle = {
   flex: 1,
   marginTop: '22%',
-}
+};
 
 const centerText: ViewStyle = {
   flex: 1,
-  alignItems: "center",
-  justifyContent: "center"
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const titleText: TextStyle = {
@@ -26,24 +26,24 @@ const titleText: TextStyle = {
   fontWeight: 'bold',
   textAlign: 'left',
   color: '#fff',
-  paddingLeft: '3.5%'
-}
+  paddingLeft: '3.5%',
+};
 
 const wholeDefaultCardStyle: ViewStyle = {
-  backgroundColor: "#fff",
+  backgroundColor: '#fff',
   borderRadius: 12,
   marginTop: 10,
   marginLeft: 0,
   marginRight: 0,
   marginBottom: 0,
   height: height,
-  width: width
-}
+  width: width,
+};
 
 const finderDefaultCardStyle: ViewStyle = {
-  backgroundColor: "#fff",
+  backgroundColor: '#fff',
   borderRadius: 12,
-  shadowColor: "#000",
+  shadowColor: '#000',
   shadowOffset: { width: 0, height: 3 },
   shadowOpacity: 0.8,
   shadowRadius: 3,
@@ -51,19 +51,19 @@ const finderDefaultCardStyle: ViewStyle = {
   marginLeft: 10,
   marginRight: 10,
   height: height - 300,
-  width: width - 100
+  width: width - 100,
 };
 
 const homeSandwichCardStyle: ViewStyle = {
-  backgroundColor: "#fff",
+  backgroundColor: '#fff',
   borderRadius: 12,
-  shadowColor: "#000",
+  shadowColor: '#000',
   shadowOffset: { width: 0, height: 3 },
   shadowOpacity: 0.8,
   shadowRadius: 3,
   height: height - 450,
   width: width - 100,
-  marginBottom: 40
+  marginBottom: 40,
 };
 
 export const styles = StyleSheet.create({
@@ -73,5 +73,5 @@ export const styles = StyleSheet.create({
   centerText,
   titleText,
   homeSandwichCardStyle,
-  wholeDefaultCardStyle
+  wholeDefaultCardStyle,
 });
