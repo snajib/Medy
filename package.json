@@ -2,13 +2,13 @@
   "jest": {
     "preset": "react-native",
     "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
     },
     "globals": {
       "ts-jest": {
         "tsConfigFile": "tsconfig.jest.json"
-      }
+      },
+      "verbose": true
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
@@ -67,7 +67,9 @@
     "@types/node": "^12.11.1",
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.57.65",
+    "babel-plugin-jest-hoist": "^23.2.0",
     "babel-preset-expo": "^6.0.0",
+    "babel-jest": "23.6.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",
@@ -80,7 +82,17 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^4.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "jest-canvas-mock": "^1.1.0",
+    "jest-config": "^23.6.0"
   },
-  "private": true
+  "private": true,
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "tests/junit.xml",
+    "classNameTemplate": "{classname} - {title}",
+    "titleTemplate": "{classname} - {title}",
+    "ancestorSeparator": " > ",
+    "usePathForSuiteName": "true"
+  }
 }
