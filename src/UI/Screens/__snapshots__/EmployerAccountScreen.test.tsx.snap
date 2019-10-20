@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployerAccountScreen should render with snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#5F44BA",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": "22%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 36,
+          "fontStyle": "normal",
+          "fontWeight": "bold",
+          "paddingLeft": "3.5%",
+          "textAlign": "left",
+        }
+      }
+    >
+      Account
+    </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 12,
+          "height": 1334,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 10,
+          "width": 750,
+        }
+      }
+    />
+  </View>
+</View>
+`;
