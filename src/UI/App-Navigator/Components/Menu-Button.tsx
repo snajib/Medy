@@ -17,3 +17,9 @@ export const HeaderButton = (
 
 export const MenuButton = (navigation: NavigationComponent) =>
   HeaderButton('ios-menu', 'white', () => navigation.openDrawer());
+
+export const RegularButton = (navigation: NavigationComponent) =>
+  HeaderButton('ios-square', 'white', () => navigation.navigate('FinderScreen'))
+
+export const SandwichButton = (navigation: NavigationComponent) =>
+  HeaderButton('ios-list', 'white', () => navigation.navigate('FinderSandwichScreen'))
