@@ -1,18 +1,21 @@
 import React from "react";
-import { ScrollView, View, Text } from "react-native";
-import { height, styles } from "./styles";
+import { ScrollView, ViewStyle, StyleProp } from "react-native";
+import { Cards } from "./Cards/Cards";
 
-const cardList = ["Calender", "Past Employees", "Statistics"];
+interface Props {
+  style: StyleProp<ViewStyle>
+  schema?: string[]
+  snapToInterval: number
+}
 
-export class VerticalScroll extends React.Component {
-  public renderCards: () => React.ReactNode = () => {
-    return cardList.map(card => {
+export class VerticalScroll extends React.Component<Props> {
+  public renderCards(list: string[]) {
+    return list.map(section => {
       return (
-        <View key={card} style={styles.homeSandwichCardStyle}>
-          <View style={styles.centerText}>
-            <Text>{card}</Text>
-          </View>
-        </View>
+        <Cards
+          style={this.props.style}
+          profileName={section}>
+        </Cards>
       );
     });
   };
@@ -23,7 +26,7 @@ export class VerticalScroll extends React.Component {
         horizontal={false}
         decelerationRate={0}
         snapToAlignment={"start"}
-        snapToInterval={height - 500}
+        snapToInterval={this.props.snapToInterval}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ marginTop: 80 }}
         contentInset={{
@@ -33,7 +36,7 @@ export class VerticalScroll extends React.Component {
           bottom: 80
         }}
       >
-        {this.renderCards()}
+        {this.renderCards(this.props.schema)}
       </ScrollView>
     );
   }

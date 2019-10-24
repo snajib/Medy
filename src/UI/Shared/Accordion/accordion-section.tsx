@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity, Text, ViewStyle, StyleProp, TextStyle } from "react-native";
-import { styles } from "./styles";
+import { styles } from "../styles";
 
 interface IAccordianSectionProps {
     active: boolean
@@ -42,5 +42,3 @@ export class AccordionSection extends React.Component<IAccordianSectionProps, IA
         )
     }
 }
-//active ? styles.active : styles.inActive
-//<Text>{this.props.children}</Text>

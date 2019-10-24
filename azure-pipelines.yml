@@ -15,10 +15,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: 
-    npm install -g expo-cli
-  displayName: 'install expo cli'
+- script:
+    yarn
+  displayName: 'yarn install packages'
 
-- script: 
-    npm install npm -g
-  displayName: 'install node modules'
+# - script: 
+#     npm build:status
+#   displayName: 'build test'
