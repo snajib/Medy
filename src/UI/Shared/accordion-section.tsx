@@ -24,10 +24,9 @@ export class AccordionSection extends React.Component<IAccordianSectionProps, IA
     }
 
     handleClick = () => () => {
-        // this.setState({
-        //     active: !this.state.active
-        // })
-        this.props.onClick(this.props.active);
+        this.setState({
+            active: !this.state.active
+        })
     }
 
     render() {
