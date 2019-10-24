@@ -2,19 +2,21 @@ import React from "react";
 import { View, TouchableOpacity, Text, ViewStyle, StyleProp, TextStyle } from "react-native";
 import { styles } from "../styles";
 
-interface Props {
+interface IAccordianSectionProps {
+    active: boolean
     title: string;
     topContainer?: StyleProp<ViewStyle>
     labelText?: StyleProp<TextStyle>
     content?: StyleProp<ViewStyle>
+    onClick: (active: boolean) => void
 }
 
-interface State {
+interface IAccordianSectionState {
     active: boolean;
 }
 
-export class AccordionSection extends React.Component<Props, State> {
-    constructor(props: Props) {
+export class AccordionSection extends React.Component<IAccordianSectionProps, IAccordianSectionState> {
+    constructor(props: IAccordianSectionProps) {
         super(props);
         this.state = {
             active: false,
