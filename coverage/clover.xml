@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1572116704462" clover="3.2.0">
-  <project timestamp="1572116704462" name="All files">
+<coverage generated="1572121821050" clover="3.2.0">
+  <project timestamp="1572121821050" name="All files">
     <metrics statements="41" coveredstatements="39" conditionals="2" coveredconditionals="1" methods="21" coveredmethods="19" elements="64" coveredelements="59" complexity="0" loc="41" ncloc="41" packages="3" files="15" classes="15"/>
     <package name="Screens">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
@@ -55,26 +55,26 @@
       </file>
       <file name="styles.ts" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/styles.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="11" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="6" count="11" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="17" count="11" type="stmt"/>
-        <line num="23" count="11" type="stmt"/>
-        <line num="32" count="11" type="stmt"/>
-        <line num="43" count="11" type="stmt"/>
-        <line num="57" count="11" type="stmt"/>
-        <line num="69" count="11" type="stmt"/>
-        <line num="81" count="11" type="stmt"/>
-        <line num="86" count="11" type="stmt"/>
-        <line num="95" count="11" type="stmt"/>
-        <line num="99" count="11" type="stmt"/>
-        <line num="104" count="11" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="32" count="12" type="stmt"/>
+        <line num="43" count="12" type="stmt"/>
+        <line num="57" count="12" type="stmt"/>
+        <line num="69" count="12" type="stmt"/>
+        <line num="81" count="12" type="stmt"/>
+        <line num="86" count="12" type="stmt"/>
+        <line num="95" count="12" type="stmt"/>
+        <line num="99" count="12" type="stmt"/>
+        <line num="104" count="12" type="stmt"/>
       </file>
     </package>
     <package name="Shared.Accordion">
       <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="6"/>
-      <file name="accordion-schemas.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.tsx">
+      <file name="accordion-schemas.ts" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="26" count="4" type="stmt"/>
         <line num="32" count="4" type="stmt"/>
@@ -83,18 +83,18 @@
       </file>
       <file name="accordion-section.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-section.tsx">
         <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
-        <line num="20" count="39" type="stmt"/>
-        <line num="21" count="39" type="stmt"/>
-        <line num="26" count="39" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="33" count="39" type="stmt"/>
+        <line num="30" count="54" type="stmt"/>
+        <line num="31" count="54" type="stmt"/>
+        <line num="36" count="54" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="43" count="54" type="stmt"/>
       </file>
       <file name="accordion.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion.tsx">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
-        <line num="18" count="39" type="stmt"/>
-        <line num="33" count="12" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+        <line num="18" count="54" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
       </file>
     </package>
   </project>

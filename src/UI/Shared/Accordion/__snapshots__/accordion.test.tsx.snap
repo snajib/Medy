@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with snapshot 1`] = `
+<View
+  style={
+    Object {
+      "paddingLeft": "5%",
+      "paddingTop": "2.5%",
+    }
+  }
+>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "paddingTop": "5%",
+            "textAlign": "left",
+          }
+        }
+      >
+        1
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View>
+        <Text>
+          accordion content
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "paddingTop": "5%",
+            "textAlign": "left",
+          }
+        }
+      >
+        2
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View>
+        <Text>
+          accordion content
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "paddingTop": "5%",
+            "textAlign": "left",
+          }
+        }
+      >
+        3
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View>
+        <Text>
+          accordion content
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "paddingTop": "5%",
+            "textAlign": "left",
+          }
+        }
+      >
+        4
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View>
+        <Text>
+          accordion content
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 30,
+            "fontStyle": "normal",
+            "fontWeight": "bold",
+            "paddingTop": "5%",
+            "textAlign": "left",
+          }
+        }
+      >
+        5
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View>
+        <Text>
+          accordion content
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

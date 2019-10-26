@@ -4,21 +4,21 @@ import { AccordionSection } from './accordion-section';
 import { styles } from '../styles';
 import uuid from 'uuid-js';
 
-export interface IAccordianProps {
+export interface IAccordionProps {
   schema: string[];
 }
 
-function accordianSectionClick(active?: boolean): boolean {
+function accordionSectionClick(active?: boolean): boolean {
   return (active = !active);
 }
 
-export class Accordion extends React.Component<IAccordianProps> {
+export class Accordion extends React.Component<IAccordionProps> {
   public renderSections(list: string[]) {
     return list.map(section => {
       return (
         <AccordionSection
           active={false}
-          onClick={accordianSectionClick}
+          onClick={accordionSectionClick}
           key={uuid.create().toString()}
           labelText={styles.accordionSectionLabel}
           title={section}
