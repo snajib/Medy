@@ -10,7 +10,7 @@ const mockSchema = [
   'Profile 2',
   'Profile 3',
   'Profile 4',
-  'Profile 5'
+  'Profile 5',
 ];
 
 describe('Vertical-Scroll', () => {
@@ -20,7 +20,7 @@ describe('Vertical-Scroll', () => {
         style={styles.finderSandwichCardStyle}
         schema={mockSchema}
         snapToInterval={0}
-      />
+      />,
     );
     expect(verticalScroll.root.findAllByType(Card).length).toBe(5);
   });
@@ -31,7 +31,7 @@ describe('Vertical-Scroll', () => {
         style={styles.finderSandwichCardStyle}
         schema={mockSchema}
         snapToInterval={0}
-      />
+      />,
     );
     expect(verticalScroll.root.findAllByType(ScrollView).length).toBe(1);
     expect(verticalScroll.root.findAllByType(View).length).toBe(11);
@@ -43,7 +43,7 @@ describe('Vertical-Scroll', () => {
         style={styles.finderDefaultCardStyle}
         schema={mockSchema}
         snapToInterval={0}
-      />
+      />,
     );
     expect(verticalScroll.toJSON()).toMatchSnapshot();
   });
