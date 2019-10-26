@@ -15,7 +15,7 @@ export class EmployerFinderSandwichScreen extends React.Component {
             'Profile 3',
             'Profile 4',
             'Profile 5',
-            'Profile 6',
+            'Profile 6'
           ]}
           snapToInterval={0}
         />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1572121821050" clover="3.2.0">
-  <project timestamp="1572121821050" name="All files">
-    <metrics statements="41" coveredstatements="39" conditionals="2" coveredconditionals="1" methods="21" coveredmethods="19" elements="64" coveredelements="59" complexity="0" loc="41" ncloc="41" packages="3" files="15" classes="15"/>
+<coverage generated="1572123445123" clover="3.2.0">
+  <project timestamp="1572123445123" name="All files">
+    <metrics statements="46" coveredstatements="44" conditionals="2" coveredconditionals="1" methods="26" coveredmethods="24" elements="74" coveredelements="69" complexity="0" loc="46" ncloc="46" packages="3" files="18" classes="18"/>
     <package name="Screens">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
       <file name="EmployerAccountScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerAccountScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="3" type="stmt"/>
@@ -11,6 +11,10 @@
       <file name="EmployerCalenderScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerCalenderScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
+      </file>
+      <file name="EmployerFinderSandwichScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerFinderSandwichScreen.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
       <file name="EmployerFinderScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerFinderScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -49,7 +53,7 @@
       <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
       <file name="Card.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Card.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="51" type="stmt"/>
+        <line num="14" count="63" type="stmt"/>
       </file>
       <file name="horizontal-scroll.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/horizontal-scroll.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -59,54 +63,32 @@
       </file>
       <file name="styles.ts" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/styles.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-<<<<<<< HEAD
-        <line num="3" count="13" type="stmt"/>
-        <line num="4" count="13" type="stmt"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="12" count="13" type="stmt"/>
-        <line num="17" count="13" type="stmt"/>
-        <line num="23" count="13" type="stmt"/>
-        <line num="32" count="13" type="stmt"/>
-        <line num="43" count="13" type="stmt"/>
-        <line num="57" count="13" type="stmt"/>
-        <line num="69" count="13" type="stmt"/>
-        <line num="81" count="13" type="stmt"/>
-        <line num="86" count="13" type="stmt"/>
-        <line num="95" count="13" type="stmt"/>
-        <line num="99" count="13" type="stmt"/>
-        <line num="104" count="13" type="stmt"/>
+        <line num="3" count="15" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="32" count="15" type="stmt"/>
+        <line num="43" count="15" type="stmt"/>
+        <line num="57" count="15" type="stmt"/>
+        <line num="69" count="15" type="stmt"/>
+        <line num="81" count="15" type="stmt"/>
+        <line num="86" count="15" type="stmt"/>
+        <line num="95" count="15" type="stmt"/>
+        <line num="99" count="15" type="stmt"/>
+        <line num="104" count="15" type="stmt"/>
       </file>
       <file name="vertical-scroll.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/vertical-scroll.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="15" count="21" type="stmt"/>
-        <line num="26" count="5" type="stmt"/>
-=======
-        <line num="3" count="12" type="stmt"/>
-        <line num="4" count="12" type="stmt"/>
-        <line num="6" count="12" type="stmt"/>
-        <line num="12" count="12" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
-        <line num="23" count="12" type="stmt"/>
-        <line num="32" count="12" type="stmt"/>
-        <line num="43" count="12" type="stmt"/>
-        <line num="57" count="12" type="stmt"/>
-        <line num="69" count="12" type="stmt"/>
-        <line num="81" count="12" type="stmt"/>
-        <line num="86" count="12" type="stmt"/>
-        <line num="95" count="12" type="stmt"/>
-        <line num="99" count="12" type="stmt"/>
-        <line num="104" count="12" type="stmt"/>
->>>>>>> aef219a0ce81c373ba0c338079a7772ed601df87
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="33" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
       </file>
     </package>
     <package name="Shared.Accordion">
       <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="6"/>
-<<<<<<< HEAD
-      <file name="accordion-schemas.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.tsx">
-=======
-      <file name="accordion-schemas.ts" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.ts">
->>>>>>> aef219a0ce81c373ba0c338079a7772ed601df87
+      <file name="accordion-schemas.ts" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="26" count="4" type="stmt"/>
         <line num="32" count="4" type="stmt"/>
