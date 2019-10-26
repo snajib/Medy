@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, View, StyleProp, ViewStyle } from 'react-native';
 import { width } from './styles';
-import { Card } from './Card';
+import { Card } from './card';
 import uuid from 'uuid-js';
 
 interface IHorizontalScrollProps {

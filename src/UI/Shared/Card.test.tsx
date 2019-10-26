@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { styles } from './styles';
-import { Card, ICardProps } from './Card';
+import { Card, ICardProps } from './card';
 import { Text, View } from 'react-native';
 
 const cardProps: ICardProps = {

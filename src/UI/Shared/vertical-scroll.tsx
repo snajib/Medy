@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, ViewStyle, StyleProp } from 'react-native';
-import { Card } from './Card';
+import { Card } from './card';
 import uuid from 'uuid-js';
 
 interface Props {

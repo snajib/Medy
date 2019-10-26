@@ -1,6 +1,6 @@
 import React from 'react';
 import { createAppContainer, createDrawerNavigator } from 'react-navigation';
-import { CustomDrawerComponent } from '../Components/CustomDrawerComponent';
+import { CustomDrawerComponent } from '../Components/custom-drawer-component';
 import { TabNavigator } from '../Tab/tab-navigator-configuration';
 import {
   employerDrawerAccountStackNavigator,

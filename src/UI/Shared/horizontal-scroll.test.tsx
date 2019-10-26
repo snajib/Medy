@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { HorizontalScroll } from './horizontal-scroll';
 import { styles } from './styles';
-import { Card } from './Card';
+import { Card } from './card';
 import { ScrollView, View } from 'react-native';
 
 const mockSchema = [
