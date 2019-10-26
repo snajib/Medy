@@ -1,18 +1,20 @@
 import React from "react";
-import { ScrollView, View, Text } from "react-native";
-import { width, styles } from "./styles";
+import { ScrollView, View, StyleProp, ViewStyle } from "react-native";
+import { width } from "./styles";
+import { Cards } from "./Cards/Cards";
 
-const profileList = ["Profile 1", "Profile 2", "Profile 3", "Profile 4"];
-
-export class HorizontalScroll extends React.Component {
-  public renderCards: () => React.ReactNode = () => {
+interface Props {
+  style: StyleProp<ViewStyle>
+  schema?: string[]
+}
+export class HorizontalScroll extends React.Component<Props> {
+  public renderCards(profileList: string[]) {
     return profileList.map(profile => {
       return (
-        <View key={profile} style={styles.finderDefaultCardStyle}>
-          <View style={styles.centerText}>
-            <Text>{profile}</Text>
-          </View>
-        </View>
+        <Cards
+          style={this.props.style}
+          profileName={profile}>
+        </Cards>
       );
     });
   };
@@ -39,7 +41,7 @@ export class HorizontalScroll extends React.Component {
           }}
         >
           <View style={{ width: 30 }} />
-          {this.renderCards()}
+          {this.renderCards(this.props.schema)}
         </ScrollView>
       </>
     );

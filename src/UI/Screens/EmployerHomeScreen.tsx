@@ -1,13 +1,17 @@
 import React from 'react';
 import { View } from 'react-native';
-import { styles } from '../Shared/styles';
+import { styles, height } from '../Shared/styles';
 import { VerticalScroll } from '../Shared/vertical-scroll';
 
 export class EmployerHomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.topPrimaryContainterStyle}>
-        <VerticalScroll />
+        <VerticalScroll
+          style={styles.homeSandwichCardStyle}
+          schema={['Calender', 'Statistics', 'Performance']}
+          snapToInterval={height - 500}
+        />
       </View>
     );
   }

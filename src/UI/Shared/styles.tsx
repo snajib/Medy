@@ -66,6 +66,41 @@ const homeSandwichCardStyle: ViewStyle = {
   marginBottom: 40,
 };
 
+const finderSandwichCardStyle: ViewStyle = {
+  backgroundColor: '#fff',
+  borderRadius: 12,
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 3 },
+  shadowOpacity: 0.8,
+  shadowRadius: 3,
+  height: height - 650,
+  width: width - 100,
+  marginBottom: 40,
+};
+
+const topAccordionContainer: ViewStyle = {
+  paddingLeft: '5%',
+  paddingTop: '2.5%',
+};
+
+const accordionSectionLabel: TextStyle = {
+  fontSize: 30,
+  fontStyle: 'normal',
+  fontWeight: 'bold',
+  textAlign: 'left',
+  color: '#000',
+  paddingTop: '5%',
+};
+
+const sectionActive: ViewStyle = {
+  paddingLeft: '5%',
+};
+
+const sectionInActive: ViewStyle = {
+  height: 0,
+  overflow: 'hidden',
+};
+
 export const styles = StyleSheet.create({
   topPrimaryContainterStyle,
   topSecondaryContainerStyle,
@@ -73,5 +108,10 @@ export const styles = StyleSheet.create({
   centerText,
   titleText,
   homeSandwichCardStyle,
+  finderSandwichCardStyle,
   wholeDefaultCardStyle,
+  topAccordionContainer,
+  accordionSectionLabel,
+  sectionActive,
+  sectionInActive,
 });
