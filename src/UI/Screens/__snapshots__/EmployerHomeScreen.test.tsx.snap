@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployerHomeScreen should render with snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#5F44BA",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "marginTop": 80,
+      }
+    }
+    contentInset={
+      Object {
+        "bottom": 80,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      }
+    }
+    decelerationRate={0}
+    horizontal={false}
+    showsVerticalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={834}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 884,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Calender
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 884,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Statistics
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 884,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Performance
+          </Text>
+          <Text />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

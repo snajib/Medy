@@ -17,7 +17,7 @@ export class VerticalScroll extends React.Component<Props> {
           key={uuid.create().toString()}
           style={this.props.style}
           profileName={section}
-        ></Card>
+        />
       );
     });
   }
@@ -35,7 +35,7 @@ export class VerticalScroll extends React.Component<Props> {
           top: 0,
           left: 0,
           right: 0,
-          bottom: 80,
+          bottom: 80
         }}
       >
         {this.renderCards(this.props.schema)}
