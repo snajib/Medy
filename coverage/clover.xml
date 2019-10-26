@@ -3,40 +3,48 @@
   <project timestamp="1572124661398" name="All files">
     <metrics statements="41" coveredstatements="39" conditionals="2" coveredconditionals="1" methods="21" coveredmethods="19" elements="64" coveredelements="59" complexity="0" loc="41" ncloc="41" packages="3" files="15" classes="15"/>
     <package name="Screens">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
-      <file name="EmployerAccountScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerAccountScreen.tsx">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
+      <file name="EmployerAccountScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerAccountScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="3" type="stmt"/>
       </file>
-      <file name="EmployerCalenderScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerCalenderScreen.tsx">
+      <file name="EmployerCalenderScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerCalenderScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
       </file>
-      <file name="EmployerFinderScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerFinderScreen.tsx">
+      <file name="EmployerFinderSandwichScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerFinderSandwichScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
       </file>
-      <file name="EmployerHelpScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerHelpScreen.tsx">
+      <file name="EmployerFinderScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerFinderScreen.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="EmployerHelpScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerHelpScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
       </file>
-      <file name="EmployerHistoryScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerHistoryScreen.tsx">
+      <file name="EmployerHistoryScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerHistoryScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="3" type="stmt"/>
       </file>
-      <file name="EmployerMoreScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerMoreScreen.tsx">
+      <file name="EmployerHomeScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerHomeScreen.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+      <file name="EmployerMoreScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerMoreScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
       </file>
-      <file name="EmployerPostingsScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerPostingsScreen.tsx">
+      <file name="EmployerPostingsScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerPostingsScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="3" type="stmt"/>
       </file>
-      <file name="EmployerProfileScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerProfileScreen.tsx">
+      <file name="EmployerProfileScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerProfileScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="3" type="stmt"/>
       </file>
-      <file name="EmployerSettingsScreen.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Screens/EmployerSettingsScreen.tsx">
+      <file name="EmployerSettingsScreen.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Screens/EmployerSettingsScreen.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="9" count="3" type="stmt"/>
       </file>
@@ -45,43 +53,49 @@
       <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="card.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/card.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="30" type="stmt"/>
+        <line num="14" count="63" type="stmt"/>
       </file>
-      <file name="horizontal-scroll.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/horizontal-scroll.tsx">
+      <file name="horizontal-scroll.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/horizontal-scroll.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="13" count="5" type="stmt"/>
         <line num="14" count="25" type="stmt"/>
         <line num="25" count="5" type="stmt"/>
       </file>
-      <file name="styles.ts" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/styles.ts">
+      <file name="styles.ts" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/styles.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="12" type="stmt"/>
-        <line num="4" count="12" type="stmt"/>
-        <line num="6" count="12" type="stmt"/>
-        <line num="12" count="12" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
-        <line num="23" count="12" type="stmt"/>
-        <line num="32" count="12" type="stmt"/>
-        <line num="43" count="12" type="stmt"/>
-        <line num="57" count="12" type="stmt"/>
-        <line num="69" count="12" type="stmt"/>
-        <line num="81" count="12" type="stmt"/>
-        <line num="86" count="12" type="stmt"/>
-        <line num="95" count="12" type="stmt"/>
-        <line num="99" count="12" type="stmt"/>
-        <line num="104" count="12" type="stmt"/>
+        <line num="3" count="15" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="12" count="15" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="32" count="15" type="stmt"/>
+        <line num="43" count="15" type="stmt"/>
+        <line num="57" count="15" type="stmt"/>
+        <line num="69" count="15" type="stmt"/>
+        <line num="81" count="15" type="stmt"/>
+        <line num="86" count="15" type="stmt"/>
+        <line num="95" count="15" type="stmt"/>
+        <line num="99" count="15" type="stmt"/>
+        <line num="104" count="15" type="stmt"/>
+      </file>
+      <file name="vertical-scroll.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/vertical-scroll.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="33" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
       </file>
     </package>
     <package name="Shared.Accordion">
       <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="6"/>
-      <file name="accordion-schemas.ts" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.ts">
+      <file name="accordion-schemas.ts" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Accordion/accordion-schemas.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="26" count="4" type="stmt"/>
         <line num="32" count="4" type="stmt"/>
         <line num="37" count="4" type="stmt"/>
         <line num="43" count="4" type="stmt"/>
       </file>
-      <file name="accordion-section.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion-section.tsx">
+      <file name="accordion-section.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Accordion/accordion-section.tsx">
         <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
         <line num="30" count="54" type="stmt"/>
         <line num="31" count="54" type="stmt"/>
@@ -89,7 +103,7 @@
         <line num="37" count="0" type="stmt"/>
         <line num="43" count="54" type="stmt"/>
       </file>
-      <file name="accordion.tsx" path="/Users/sammy/Documents/Medy/Medy/src/UI/Shared/Accordion/accordion.tsx">
+      <file name="accordion.tsx" path="/Users/zakirefai/Desktop/Medy/Medy/src/UI/Shared/Accordion/accordion.tsx">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="12" count="0" type="stmt"/>
         <line num="17" count="15" type="stmt"/>

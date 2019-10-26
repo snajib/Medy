@@ -1,36 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Horizontal-Scroll should render with snapshot 1`] = `
+exports[`Vertical-Scroll should render with snapshot 1`] = `
 <RCTScrollView
-  centerContent={true}
   contentContainerStyle={
     Object {
-      "marginLeft": 10,
-      "marginRight": 10,
+      "marginTop": 80,
     }
   }
   contentInset={
     Object {
-      "bottom": 0,
+      "bottom": 80,
       "left": 0,
-      "right": 50,
+      "right": 0,
       "top": 0,
     }
   }
   decelerationRate={0}
-  horizontal={true}
-  showsHorizontalScrollIndicator={false}
+  horizontal={false}
+  showsVerticalScrollIndicator={false}
   snapToAlignment="start"
-  snapToInterval={670}
+  snapToInterval={0}
 >
   <View>
-    <View
-      style={
-        Object {
-          "width": 30,
-        }
-      }
-    />
     <View
       style={
         Object {
