@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, View, StyleProp, ViewStyle } from 'react-native';
 import { width } from './styles';
-import { Cards } from './Cards/Cards';
+import { Card } from './Card';
 import uuid from 'uuid-js';
 
 interface IHorizontalScrollProps {
@@ -12,7 +12,7 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
   public renderCards(profileList: string[]) {
     return profileList.map(profile => {
       return (
-        <Cards
+        <Card
           key={uuid.create().toString()}
           style={this.props.style}
           profileName={profile}

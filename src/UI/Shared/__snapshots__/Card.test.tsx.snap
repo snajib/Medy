@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 12,
+      "height": 1034,
+      "marginLeft": 10,
+      "marginRight": 10,
+      "marginTop": 100,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.8,
+      "shadowRadius": 3,
+      "width": 650,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text>
+      Test
+    </Text>
+    <Text>
+      abc
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should render with snapshot 2`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 12,
+      "height": 684,
+      "marginBottom": 40,
+      "shadowColor": "#000",
+      "shadowOffset": Object {
+        "height": 3,
+        "width": 0,
+      },
+      "shadowOpacity": 0.8,
+      "shadowRadius": 3,
+      "width": 650,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text>
+      Test
+    </Text>
+    <Text>
+      abc
+    </Text>
+  </View>
+</View>
+`;

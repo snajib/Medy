@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, StyleProp, ViewStyle } from 'react-native';
-import { styles } from '../styles';
+import { styles } from './styles';
 
-interface ICardsProps {
+export interface ICardProps {
   style?: StyleProp<ViewStyle>;
   profileName?: string;
   summary?: string;
-  key?: string;
+  key: string;
 }
 
-export class Cards extends React.Component<ICardsProps> {
+export class Card extends React.Component<ICardProps> {
   render() {
     return (
       <View key={this.props.key} style={this.props.style}>
