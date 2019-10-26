@@ -63,6 +63,7 @@ exports[`should render with snapshot 1`] = `
         <Text>
           Profile 1
         </Text>
+        <Text />
       </View>
     </View>
     <View
@@ -97,6 +98,7 @@ exports[`should render with snapshot 1`] = `
         <Text>
           Profile 2
         </Text>
+        <Text />
       </View>
     </View>
     <View
@@ -131,6 +133,7 @@ exports[`should render with snapshot 1`] = `
         <Text>
           Profile 3
         </Text>
+        <Text />
       </View>
     </View>
     <View
@@ -165,6 +168,42 @@ exports[`should render with snapshot 1`] = `
         <Text>
           Profile 4
         </Text>
+        <Text />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 12,
+          "height": 1034,
+          "marginLeft": 10,
+          "marginRight": 10,
+          "marginTop": 100,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 3,
+          "width": 650,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Text>
+          Profile 5
+        </Text>
+        <Text />
       </View>
     </View>
   </View>
