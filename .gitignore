@@ -29,3 +29,6 @@ yarn.tar.gz
 # BUILD
 lib
 build
+
+# other files
+coverage
