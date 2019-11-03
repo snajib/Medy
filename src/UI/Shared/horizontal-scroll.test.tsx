@@ -10,7 +10,7 @@ const mockSchema = [
   'Profile 2',
   'Profile 3',
   'Profile 4',
-  'Profile 5'
+  'Profile 5',
 ];
 
 describe('Horizontal-Scroll', () => {
@@ -19,7 +19,7 @@ describe('Horizontal-Scroll', () => {
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
         schema={mockSchema}
-      />
+      />,
     );
     expect(horizontalScroll.root.findAllByType(Card).length).toBe(5);
   });
@@ -29,7 +29,7 @@ describe('Horizontal-Scroll', () => {
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
         schema={mockSchema}
-      />
+      />,
     );
     expect(horizontalScroll.root.findAllByType(ScrollView).length).toBe(1);
     expect(horizontalScroll.root.findAllByType(View).length).toBe(12);
@@ -40,7 +40,7 @@ describe('Horizontal-Scroll', () => {
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
         schema={mockSchema}
-      />
+      />,
     );
     expect(horizontalScroll.toJSON()).toMatchSnapshot();
   });

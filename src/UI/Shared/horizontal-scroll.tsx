@@ -33,13 +33,13 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{
             marginLeft: 10,
-            marginRight: 10
+            marginRight: 10,
           }}
           contentInset={{
             top: 0,
             left: 0,
             bottom: 0,
-            right: 50
+            right: 50,
           }}
         >
           <View style={{ width: 30 }} />

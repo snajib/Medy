@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, ViewStyle, StyleProp } from 'react-native';
-import { Card } from './Card';
 import uuid from 'uuid-js';
+import { Card } from './Card';
 
 interface Props {
   style: StyleProp<ViewStyle>;
@@ -35,7 +35,7 @@ export class VerticalScroll extends React.Component<Props> {
           top: 0,
           left: 0,
           right: 0,
-          bottom: 80
+          bottom: 80,
         }}
       >
         {this.renderCards(this.props.schema)}
