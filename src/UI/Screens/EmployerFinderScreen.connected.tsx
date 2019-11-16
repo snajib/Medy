@@ -2,23 +2,19 @@ import {
   IEmployerFinderScreenProps,
   EmployerFinderScreen,
 } from './EmployerFinderScreen';
-import { IEmployerApplicationState } from '../../../store/app-action-reducer';
 import { connect } from 'react-redux';
+import { RootState } from '../../../store/root-reducer';
+// import { mockEmployeeList } from '../../../models/employer.mock';
 
 export const mapStateToProps = (
-  state: IEmployerApplicationState,
+  state: RootState
 ): IEmployerFinderScreenProps => {
-  if (!state.employeeList) {
-    throw new Error('Missing Employee List');
-  }
-
-  const employeeList = state.employeeList;
-
   return {
-    EmployeeList: employeeList,
+    ...state,
+    EmployeeList: state.appActionReducer.employeeList,
   };
 };
 
 export const ConnectedEmployerFinderScreen = connect(mapStateToProps)(
-  EmployerFinderScreen,
+  EmployerFinderScreen
 );

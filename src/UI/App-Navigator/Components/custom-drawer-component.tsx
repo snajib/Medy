@@ -1,5 +1,5 @@
-import React from 'react';
-import { DrawerItems, DrawerItemsProps } from 'react-navigation';
+import React from "react";
+import { DrawerItems, DrawerItemsProps } from "react-navigation";
 import {
   View,
   Text,
@@ -8,12 +8,12 @@ import {
   StyleSheet,
   SafeAreaView,
   ViewStyle,
-  ImageStyle,
-} from 'react-native';
+  ImageStyle
+} from "react-native";
 
 export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
   public handleNavigate = () => () => {
-    this.props.navigation.navigate('Profile');
+    this.props.navigation.navigate("Profile");
   };
 
   render() {
@@ -23,16 +23,16 @@ export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
           <View style={styles.profileImageContainer}>
             <TouchableOpacity onPress={this.handleNavigate()}>
               <Image
-                source={require('../../../../assets/ProfilePic.png')}
+                source={require("../../../../assets/ProfilePic.png")}
                 style={styles.profileImageStyle}
               />
               <View style={styles.textProfile}>
-                <Text style={{ fontWeight: 'bold' }}> Name </Text>
+                <Text style={{ fontWeight: "bold" }}> Name </Text>
                 <Text> Job </Text>
               </View>
             </TouchableOpacity>
           </View>
-          <View style={{ backgroundColor: 'white' }}>
+          <View style={{ backgroundColor: "white" }}>
             <DrawerItems {...this.props} />
             {/*
           <TouchableOpacity
@@ -89,38 +89,38 @@ export class CustomDrawerComponent extends React.Component<DrawerItemsProps> {
 
 const container: ViewStyle = {
   flex: 1,
-  backgroundColor: '#ffffff',
+  backgroundColor: "#ffffff"
 };
 
 const profileImageContainer: ViewStyle = {
-  display: 'flex',
-  flexDirection: 'row',
+  display: "flex",
+  flexDirection: "row",
   height: 150,
-  backgroundColor: 'white',
-  alignItems: 'flex-start',
-  justifyContent: 'flex-start',
+  backgroundColor: "white",
+  alignItems: "flex-start",
+  justifyContent: "flex-start"
 };
 
 const profileImageStyle: ImageStyle = {
-  alignSelf: 'flex-start',
+  alignSelf: "flex-start",
   flex: 1,
   height: 120,
   width: 120,
   borderRadius: 60,
   paddingTop: 75,
-  marginLeft: 20,
+  marginLeft: 20
 };
 
 const textProfile: ImageStyle = {
-  alignSelf: 'flex-end',
+  alignSelf: "flex-end",
   flex: 2,
   marginLeft: 150,
-  marginTop: -75,
+  marginTop: -75
 };
 
 const styles = StyleSheet.create({
   container,
   profileImageContainer,
   profileImageStyle,
-  textProfile,
+  textProfile
 });

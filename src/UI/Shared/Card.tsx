@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, StyleProp, ViewStyle } from 'react-native';
-import { styles } from './styles';
+import React from "react";
+import { View, Text, StyleProp, ViewStyle } from "react-native";
+import { styles } from "./styles";
 
 export interface ICardProps {
   style?: StyleProp<ViewStyle>;
