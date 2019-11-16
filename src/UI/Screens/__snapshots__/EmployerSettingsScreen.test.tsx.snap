@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmployerAccountScreen should render with snapshot 1`] = `
+exports[`EmployerSettingsScreen should render with snapshot 1`] = `
 <View
   style={
     Object {
@@ -30,7 +30,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
         }
       }
     >
-      Account
+      Settings
     </Text>
     <View
       style={
@@ -84,7 +84,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Personal Login and Security
+                  Languages
                 </Text>
               </View>
               <View
@@ -130,7 +130,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Personal Profile
+                  Feed Preferences
                 </Text>
               </View>
               <View
@@ -176,7 +176,53 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Company Login and Security
+                  Subscriptions
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "height": 0,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View>
+                  <Text>
+                    accordion content
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#000",
+                      "fontSize": 30,
+                      "fontStyle": "normal",
+                      "fontWeight": "bold",
+                      "paddingTop": "5%",
+                      "textAlign": "left",
+                    }
+                  }
+                >
+                  Subscriptions
                 </Text>
               </View>
               <View

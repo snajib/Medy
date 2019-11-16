@@ -4,7 +4,7 @@ import {
 } from 'react-navigation';
 import {
   EmployerHomeScreen,
-  EmployerFinderScreen,
+  // EmployerFinderScreen,
   EmployerPostingsScreen,
   EmployerMoreScreen,
   EmployerProfileScreen,
@@ -12,12 +12,21 @@ import {
   EmployerHistoryScreen,
   EmployerSettingsScreen,
   EmployerHelpScreen,
-  EmployerFinderSandwichScreen
+  EmployerFinderSandwichScreen,
 } from '../../Screens';
 import { names, screenNames } from '../route-config';
-import { stackNavigatorOptions, finderSandwichStackNavigatorOptions, finderRegularStackNavigatorOptions } from './stack-navigator-tab-options';
+import {
+  stackNavigatorOptions,
+  finderSandwichStackNavigatorOptions,
+  finderRegularStackNavigatorOptions,
+} from './stack-navigator-tab-options';
+import { ConnectedEmployerFinderScreen } from '../../Screens/EmployerFinderScreen.connected';
 
-const screenRoutes = (routeName: string, screenName: any, navigatorOptions: any) => ({
+const screenRoutes = (
+  routeName: string,
+  screenName: any,
+  navigatorOptions: any,
+) => ({
   [screenNames(routeName)]: {
     screen: screenName,
     ...navigatorOptions,
@@ -58,22 +67,30 @@ const tabStackNavigator = (
 const employerHomeStackRoutes = screenRoutes(
   names.EmployerHome,
   EmployerHomeScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerFinderStackRoutes = {
-  ...screenRoutes(names.EmployerFinder, EmployerFinderScreen, finderSandwichStackNavigatorOptions),
-  ...screenRoutes(names.EmployerFinderSandwich, EmployerFinderSandwichScreen, finderRegularStackNavigatorOptions)
-}
+  ...screenRoutes(
+    names.EmployerFinder,
+    ConnectedEmployerFinderScreen,
+    finderSandwichStackNavigatorOptions,
+  ),
+  ...screenRoutes(
+    names.EmployerFinderSandwich,
+    EmployerFinderSandwichScreen,
+    finderRegularStackNavigatorOptions,
+  ),
+};
 
 const employerPostingsStackRoutes = screenRoutes(
   names.EmployerPostings,
   EmployerPostingsScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerMoreStackRoutes = screenRoutes(
   names.EmployerMore,
   EmployerMoreScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 
 const employerTabHomeStackNavigator = tabStackNavigator(
@@ -103,27 +120,27 @@ export const tabStack = {
 const employerAccountStackRoutes = screenRoutes(
   names.EmployerAccount,
   EmployerAccountScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerHistoryStackRoutes = screenRoutes(
   names.EmployerHistory,
   EmployerHistoryScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerSettingsStackRoutes = screenRoutes(
   names.EmployerSettings,
   EmployerSettingsScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerHelpStackRoutes = screenRoutes(
   names.EmployerHelp,
   EmployerHelpScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 const employerProfileStackRoutes = screenRoutes(
   names.EmployerProfile,
   EmployerProfileScreen,
-  stackNavigatorOptions
+  stackNavigatorOptions,
 );
 
 export const employerDrawerAccountStackNavigator = tabStackNavigator(

@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmployerFinderSandwichScreen should render with snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#5F44BA",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "marginTop": 80,
+      }
+    }
+    contentInset={
+      Object {
+        "bottom": 80,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      }
+    }
+    decelerationRate={0}
+    horizontal={false}
+    showsVerticalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={0}
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 1
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 2
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 3
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 4
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 5
+          </Text>
+          <Text />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 12,
+            "height": 684,
+            "marginBottom": 40,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": 650,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text>
+            Profile 6
+          </Text>
+          <Text />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

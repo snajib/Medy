@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import { styles } from '../Shared/styles';
 import { Accordion } from '../Shared/Accordion/accordion';
-import { ScrollView } from 'react-native-gesture-handler';
 import { profileOptions } from '../Shared/Accordion/accordion-schemas';
 
 export class EmployerProfileScreen extends React.Component {

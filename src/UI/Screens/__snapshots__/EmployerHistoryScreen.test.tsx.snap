@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmployerAccountScreen should render with snapshot 1`] = `
+exports[`EmployerHistoryScreen should render with snapshot 1`] = `
 <View
   style={
     Object {
@@ -30,7 +30,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
         }
       }
     >
-      Account
+      History
     </Text>
     <View
       style={
@@ -84,7 +84,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Personal Login and Security
+                  Activity
                 </Text>
               </View>
               <View
@@ -130,7 +130,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Personal Profile
+                  Past Employees
                 </Text>
               </View>
               <View
@@ -176,7 +176,7 @@ exports[`EmployerAccountScreen should render with snapshot 1`] = `
                     }
                   }
                 >
-                  Company Login and Security
+                  Purchases
                 </Text>
               </View>
               <View

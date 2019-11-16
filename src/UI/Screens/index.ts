@@ -1,4 +1,4 @@
-//Tab Screens
+// Tab Screens
 export { EmployerHomeScreen } from './EmployerHomeScreen';
 export { EmployerFinderScreen } from './EmployerFinderScreen';
 export { EmployerPostingsScreen } from './EmployerPostingsScreen';

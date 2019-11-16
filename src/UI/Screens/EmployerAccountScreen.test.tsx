@@ -5,18 +5,18 @@ import { View, Text } from 'react-native';
 
 describe('EmployerAccountScreen', () => {
   it('should render header correctly', () => {
-    const employerScreen = renderer.create(<EmployerAccountScreen />);
+    const accountScreen = renderer.create(<EmployerAccountScreen />);
 
-    expect(employerScreen.root.findAllByType(Text).length).toBe(1);
-    expect(employerScreen.root.findAllByType(Text)[0].props.children).toBe(
+    expect(accountScreen.root.findAllByType(Text).length).toBe(7);
+    expect(accountScreen.root.findAllByType(Text)[0].props.children).toBe(
       'Account',
     );
   });
 
   it('should render views correctly', () => {
-    const employerScreen = renderer.create(<EmployerAccountScreen />);
+    const accountScreen = renderer.create(<EmployerAccountScreen />);
 
-    expect(employerScreen.root.findAllByType(View).length).toBe(3);
+    expect(accountScreen.root.findAllByType(View).length).toBe(17);
   });
 
   it('should render with snapshot', () => {
