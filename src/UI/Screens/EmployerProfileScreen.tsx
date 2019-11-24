@@ -12,7 +12,7 @@ export class EmployerProfileScreen extends React.Component {
           <Text style={styles.titleText}>Profile</Text>
           <View style={styles.wholeDefaultCardStyle}>
             <ScrollView>
-              <Accordion schema={profileOptions}></Accordion>
+              <Accordion schema={profileOptions} />
             </ScrollView>
           </View>
         </View>

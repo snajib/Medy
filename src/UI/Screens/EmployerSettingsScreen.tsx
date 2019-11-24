@@ -12,7 +12,7 @@ export class EmployerSettingsScreen extends React.Component {
           <Text style={styles.titleText}>Settings</Text>
           <View style={styles.wholeDefaultCardStyle}>
             <ScrollView>
-              <Accordion schema={settingsOptions}></Accordion>
+              <Accordion schema={settingsOptions} />
             </ScrollView>
           </View>
         </View>

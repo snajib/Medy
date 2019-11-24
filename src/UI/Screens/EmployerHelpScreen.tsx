@@ -8,7 +8,7 @@ export class EmployerHelpScreen extends React.Component {
       <View style={styles.topPrimaryContainterStyle}>
         <View style={styles.topSecondaryContainerStyle}>
           <Text style={styles.titleText}>Help</Text>
-          <View style={styles.wholeDefaultCardStyle}></View>
+          <View style={styles.wholeDefaultCardStyle} />
         </View>
       </View>
     );
