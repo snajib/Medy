@@ -8,7 +8,7 @@ export class EmployerCalenderScreen extends React.Component {
       <View style={styles.topPrimaryContainterStyle}>
         <View style={styles.topSecondaryContainerStyle}>
           <Text style={styles.titleText}>Calender</Text>
-          <View style={styles.wholeDefaultCardStyle}></View>
+          <View style={styles.wholeDefaultCardStyle} />
         </View>
       </View>
     );
