@@ -12,7 +12,10 @@ const mockEmployee1: IEmployee = {
   description: 'description',
   jobTitle: 'Nurse',
   name: 'John Doe',
-  profilePicture: 'https://unsplash.com/photos/6BI7fVlw_BA',
+  profilePicture: {
+    uri:
+      'https://images.unsplash.com/photo-1556822256-05a527652985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
+  },
   rating: 5,
 };
 
@@ -20,6 +23,10 @@ const mockEmployee2: IEmployee = {
   description: 'description',
   jobTitle: 'Doctor',
   name: 'Jane Doe',
+  profilePicture: {
+    uri:
+      'https://images.unsplash.com/photo-1499358517822-d8578907a095?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2110&q=80',
+  },
   rating: 4,
 };
 

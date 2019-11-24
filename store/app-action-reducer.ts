@@ -4,6 +4,7 @@ import {
   mockEmployer,
   mockPostingList,
 } from '../models/employer.mock';
+import { ImageURISource } from 'react-native';
 
 export interface IEmployerState {
   name: string;
@@ -13,7 +14,7 @@ export interface IEmployee {
   name: string;
   description: string;
   jobTitle: string;
-  profilePicture?: string;
+  profilePicture?: ImageURISource;
   rating?: number;
 }
 
