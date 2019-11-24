@@ -8,14 +8,14 @@ export class EmployerFinderSandwichScreen extends React.Component {
     return (
       <View style={styles.topPrimaryContainterStyle}>
         <VerticalScroll
-          style={styles.finderSandwichCardStyle}
+          style='finderSandwichCardStyle'
           schema={[
             'Profile 1',
             'Profile 2',
             'Profile 3',
             'Profile 4',
             'Profile 5',
-            'Profile 6'
+            'Profile 6',
           ]}
           snapToInterval={0}
         />

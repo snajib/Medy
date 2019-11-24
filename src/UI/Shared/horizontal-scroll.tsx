@@ -5,7 +5,7 @@ import { Card } from './Card';
 import uuid from 'uuid-js';
 
 interface IHorizontalScrollProps {
-  style: StyleProp<ViewStyle>;
+  style: string;
   schema: string[];
 }
 export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {

@@ -4,7 +4,7 @@ import uuid from 'uuid-js';
 import { Card } from './Card';
 
 interface Props {
-  style: StyleProp<ViewStyle>;
+  style: string;
   schema?: string[];
   snapToInterval: number;
 }
