@@ -4,7 +4,6 @@ import {
 } from './EmployerFinderScreen';
 import { connect } from 'react-redux';
 import { RootState } from '../../../store/root-reducer';
-// import { mockEmployeeList } from '../../../models/employer.mock';
 
 export const mapStateToProps = (
   state: RootState
