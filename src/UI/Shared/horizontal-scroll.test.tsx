@@ -18,8 +18,8 @@ describe('Horizontal-Scroll', () => {
     const horizontalScroll = renderer.create(
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
-        schema={mockSchema}
-      />,
+        employeeList={mockSchema}
+      />
     );
     expect(horizontalScroll.root.findAllByType(Card).length).toBe(5);
   });
@@ -28,8 +28,8 @@ describe('Horizontal-Scroll', () => {
     const horizontalScroll = renderer.create(
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
-        schema={mockSchema}
-      />,
+        employeeList={mockSchema}
+      />
     );
     expect(horizontalScroll.root.findAllByType(ScrollView).length).toBe(1);
     expect(horizontalScroll.root.findAllByType(View).length).toBe(12);
@@ -39,8 +39,8 @@ describe('Horizontal-Scroll', () => {
     const horizontalScroll = renderer.create(
       <HorizontalScroll
         style={styles.finderDefaultCardStyle}
-        schema={mockSchema}
-      />,
+        employeeList={mockSchema}
+      />
     );
     expect(horizontalScroll.toJSON()).toMatchSnapshot();
   });

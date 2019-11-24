@@ -1,9 +1,9 @@
-import { AppReducerActionKeys } from "./app-action-reducer.actions";
+import { AppReducerActionKeys } from './app-action-reducer.actions';
 import {
   mockEmployeeList,
   mockEmployer,
-  mockPostingList
-} from "../models/employer.mock";
+  mockPostingList,
+} from '../models/employer.mock';
 
 export interface IEmployerState {
   name: string;
@@ -13,6 +13,7 @@ export interface IEmployee {
   name: string;
   description: string;
   jobTitle: string;
+  profilePicture?: string;
   rating?: number;
 }
 
@@ -43,7 +44,7 @@ export type EmployerActionTypes = ISuperListAdd | ISuperListRemove;
 export const DefaultEmployerPricingState: IEmployerApplicationState = {
   employeeList: mockEmployeeList,
   employer: mockEmployer,
-  postingList: mockPostingList
+  postingList: mockPostingList,
 };
 
 export const appActionReducer = (

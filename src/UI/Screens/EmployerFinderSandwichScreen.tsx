@@ -18,7 +18,7 @@ export class EmployerFinderSandwichScreen extends React.Component<
       <View style={styles.topPrimaryContainterStyle}>
         <VerticalScroll
           style='finderSandwichCardStyle'
-          schema={this.empList}
+          employeeList={this.props.EmployeeList}
           snapToInterval={0}
         />
       </View>

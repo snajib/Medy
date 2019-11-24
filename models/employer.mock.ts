@@ -12,6 +12,7 @@ const mockEmployee1: IEmployee = {
   description: 'description',
   jobTitle: 'Nurse',
   name: 'John Doe',
+  profilePicture: 'https://unsplash.com/photos/6BI7fVlw_BA',
   rating: 5,
 };
 

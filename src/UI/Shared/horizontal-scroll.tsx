@@ -1,21 +1,23 @@
 import React from 'react';
-import { ScrollView, View, StyleProp, ViewStyle } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import { width } from './styles';
 import { Card } from './Card';
 import uuid from 'uuid-js';
+import { IEmployee } from '../../../store/app-action-reducer';
 
 interface IHorizontalScrollProps {
   style: string;
-  schema: string[];
+  employeeList: IEmployee[];
 }
 export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
-  public renderCards(profileList: string[]) {
+  public renderCards(profileList: IEmployee[]) {
     return profileList.map(profile => {
       return (
         <Card
           key={uuid.create().toString()}
           style={this.props.style}
-          profileName={profile}
+          profilePicture={profile.profilePicture}
+          profileName={profile.name}
         />
       );
     });
@@ -43,7 +45,7 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
           }}
         >
           <View style={{ width: 30 }} />
-          {this.renderCards(this.props.schema)}
+          {this.renderCards(this.props.employeeList)}
         </ScrollView>
       </>
     );

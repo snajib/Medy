@@ -1,22 +1,23 @@
 import React from 'react';
-import { ScrollView, ViewStyle, StyleProp } from 'react-native';
+import { ScrollView } from 'react-native';
 import uuid from 'uuid-js';
 import { Card } from './Card';
+import { IEmployee } from '../../../store/app-action-reducer';
 
 interface Props {
   style: string;
-  schema?: string[];
+  employeeList?: IEmployee[];
   snapToInterval: number;
 }
 
 export class VerticalScroll extends React.Component<Props> {
-  public renderCards(list: string[]) {
-    return list.map(section => {
+  public renderCards(list: IEmployee[]) {
+    return list.map(profile => {
       return (
         <Card
           key={uuid.create().toString()}
           style={this.props.style}
-          profileName={section}
+          profileName={profile.name}
         />
       );
     });
@@ -38,7 +39,7 @@ export class VerticalScroll extends React.Component<Props> {
           bottom: 80,
         }}
       >
-        {this.renderCards(this.props.schema)}
+        {this.renderCards(this.props.employeeList)}
       </ScrollView>
     );
   }

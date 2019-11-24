@@ -18,7 +18,7 @@ export class EmployerFinderScreen extends React.Component<
       <View style={styles.topPrimaryContainterStyle}>
         <HorizontalScroll
           style='finderDefaultCardStyle'
-          schema={this.empList}
+          employeeList={this.props.EmployeeList}
         />
       </View>
     );
