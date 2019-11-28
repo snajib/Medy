@@ -20,6 +20,8 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
           profileName={profile.name}
           jobTitle={profile.jobTitle}
           rating={profile.rating}
+          summary={profile.summary}
+          experience={profile.experience}
         />
       );
     });

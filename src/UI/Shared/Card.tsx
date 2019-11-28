@@ -102,8 +102,16 @@ export class Card extends React.Component<ICardProps> {
       <View style={styles.finderDefaultCardStyle}>
         {this.renderCardHeading()}
         <View style={cardStyles.mainContent}>
-          <Text>{this.props.summary}</Text>
-          <Text>{this.props.experience}</Text>
+          <Text style={cardStyles.mainContentHeaders}>Summary</Text>
+          <View style={cardStyles.mainContentCardSummary}>
+            <Text style={cardStyles.mainContentSummary}>
+              {this.props.summary}
+            </Text>
+          </View>
+          <Text style={cardStyles.mainContentHeaders}>Experience</Text>
+          <View style={cardStyles.mainContentCardExperience}>
+            <Text>{this.props.experience}</Text>
+          </View>
         </View>
       </View>
     );
@@ -143,12 +151,57 @@ const profileInfo: TextStyle = {
 const mainContent: ViewStyle = {
   borderBottomLeftRadius: 12,
   borderBottomRightRadius: 12,
-  backgroundColor: 'blue',
   flex: 4.5,
+};
+
+const mainContentHeaders: TextStyle = {
+  color: '#6296E8',
+  fontWeight: 'bold',
+  fontSize: 20,
+  padding: '2.5%',
+};
+
+const mainContentCardSummary: ViewStyle = {
+  borderRadius: 12,
+  backgroundColor: 'white',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 3 },
+  shadowOpacity: 0.8,
+  shadowRadius: 3,
+  //TODO: This height percentage matches with entire screen, no view its within. FIX
+  height: '30%',
+  width: '90%',
+  alignSelf: 'center',
+  alignItems: 'flex-start',
+};
+
+const mainContentSummary: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  padding: '3%',
+};
+
+const mainContentCardExperience: ViewStyle = {
+  borderRadius: 12,
+  padding: '5%',
+  backgroundColor: 'white',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 3 },
+  shadowOpacity: 0.8,
+  shadowRadius: 3,
+  //TODO: This height percentage matches with entire screen, no view its within. FIX
+  height: '50%',
+  width: '90%',
+  justifyContent: 'center',
+  alignSelf: 'center',
 };
 
 const cardStyles = StyleSheet.create({
   profileHeader,
   profileInfo,
   mainContent,
+  mainContentCardSummary,
+  mainContentSummary,
+  mainContentHeaders,
+  mainContentCardExperience,
 });
