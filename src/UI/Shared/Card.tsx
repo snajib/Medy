@@ -55,17 +55,23 @@ export class Card extends React.Component<ICardProps> {
     return <View style={styles.finderSandwichCardStyle}></View>;
   };
 
+  public renderCardHeading = () => {
+    return (
+      <View style={cardStyles.profileHeader}>
+        <ProfilePicture profilePictureUri={this.props.profilePicture!} />
+        <View style={cardStyles.profileInfo}>
+          <Text style={{ fontWeight: '400' }}>{this.props.profileName}</Text>
+          <Text style={{ fontWeight: '200' }}>{this.props.jobTitle}</Text>
+          <Text>{this.props.rating}</Text>
+        </View>
+      </View>
+    );
+  };
+
   public renderDefaultCards = () => {
     return (
       <View style={styles.finderDefaultCardStyle}>
-        <View style={cardStyles.profileHeader}>
-          <ProfilePicture profilePictureUri={this.props.profilePicture!} />
-          <View style={cardStyles.profileInfo}>
-            <Text>{this.props.profileName}</Text>
-            <Text>{this.props.jobTitle}</Text>
-            <Text>{this.props.rating}</Text>
-          </View>
-        </View>
+        {this.renderCardHeading()}
         <View style={cardStyles.mainContent}>
           <Text>{this.props.summary}</Text>
           <Text>{this.props.experience}</Text>
@@ -95,7 +101,7 @@ export class Card extends React.Component<ICardProps> {
 const profileHeader: ViewStyle = {
   borderTopLeftRadius: 12,
   borderTopRightRadius: 12,
-  backgroundColor: 'grey',
+  backgroundColor: 'white',
   flex: 1,
   flexDirection: 'row',
 };
