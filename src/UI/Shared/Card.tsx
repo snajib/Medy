@@ -50,6 +50,22 @@ class ProfilePicture extends React.Component<IProfilePictureProps> {
   }
 }
 
+class RatingCircle extends React.Component {
+  public render() {
+    return (
+      <View
+        style={{
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          backgroundColor: 'black',
+          marginRight: 2,
+        }}
+      />
+    );
+  }
+}
+
 export class Card extends React.Component<ICardProps> {
   public renderSandwichCards = () => {
     return <View style={styles.finderSandwichCardStyle}></View>;
@@ -60,9 +76,22 @@ export class Card extends React.Component<ICardProps> {
       <View style={cardStyles.profileHeader}>
         <ProfilePicture profilePictureUri={this.props.profilePicture!} />
         <View style={cardStyles.profileInfo}>
-          <Text style={{ fontWeight: '400' }}>{this.props.profileName}</Text>
-          <Text style={{ fontWeight: '200' }}>{this.props.jobTitle}</Text>
-          <Text>{this.props.rating}</Text>
+          <Text style={{ fontWeight: '600', fontSize: 18 }}>
+            {this.props.profileName}
+          </Text>
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={{ fontWeight: '300', marginRight: 10 }}>
+              {this.props.jobTitle}
+            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                marginTop: 4,
+              }}
+            >
+              {Array(this.props.rating).fill(<RatingCircle />)}
+            </View>
+          </View>
         </View>
       </View>
     );
