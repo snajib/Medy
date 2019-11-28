@@ -18,6 +18,8 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
           style={this.props.style}
           profilePicture={profile.profilePicture}
           profileName={profile.name}
+          jobTitle={profile.jobTitle}
+          rating={profile.rating}
         />
       );
     });
@@ -37,6 +39,7 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
             marginLeft: 10,
             marginRight: 10,
           }}
+          //This is causing the weird offset in the profile cards upon loading finder screen
           contentInset={{
             top: 0,
             left: 0,

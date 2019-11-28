@@ -1,5 +1,13 @@
 import React from 'react';
-import { View, Text, Image, ImageURISource } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  ImageURISource,
+  StyleSheet,
+  ViewStyle,
+  TextStyle,
+} from 'react-native';
 import { styles } from './styles';
 
 export interface ICardProps {
@@ -7,7 +15,7 @@ export interface ICardProps {
   profilePicture?: ImageURISource;
   profileName?: string;
   jobTitle?: string;
-  rating?: string;
+  rating?: number;
   summary?: string;
   experience?: string;
   key: string;
@@ -34,6 +42,7 @@ class ProfilePicture extends React.Component<IProfilePictureProps> {
           borderRadius: 75,
           marginTop: -50,
           marginLeft: 15,
+          alignSelf: 'flex-start',
         }}
         source={this.props.profilePictureUri}
       />
@@ -49,10 +58,17 @@ export class Card extends React.Component<ICardProps> {
   public renderDefaultCards = () => {
     return (
       <View style={styles.finderDefaultCardStyle}>
-        <ProfilePicture profilePictureUri={this.props.profilePicture!} />
-        <View style={styles.centerText}>
-          <Text>{this.props.profileName}</Text>
+        <View style={cardStyles.profileHeader}>
+          <ProfilePicture profilePictureUri={this.props.profilePicture!} />
+          <View style={cardStyles.profileInfo}>
+            <Text>{this.props.profileName}</Text>
+            <Text>{this.props.jobTitle}</Text>
+            <Text>{this.props.rating}</Text>
+          </View>
+        </View>
+        <View style={cardStyles.mainContent}>
           <Text>{this.props.summary}</Text>
+          <Text>{this.props.experience}</Text>
         </View>
       </View>
     );
@@ -65,6 +81,7 @@ export class Card extends React.Component<ICardProps> {
       case ProfileCardTypes.FINDER_SANDWICH_CARD_STYLE:
         return this.renderSandwichCards();
       default:
+        //TODO: Fix this to something else, idk
         return <View></View>;
     }
     // );
@@ -74,3 +91,29 @@ export class Card extends React.Component<ICardProps> {
     // }
   }
 }
+
+const profileHeader: ViewStyle = {
+  borderTopLeftRadius: 12,
+  borderTopRightRadius: 12,
+  backgroundColor: 'grey',
+  flex: 1,
+  flexDirection: 'row',
+};
+
+const profileInfo: TextStyle = {
+  paddingTop: '5%',
+  paddingLeft: '5%',
+};
+
+const mainContent: ViewStyle = {
+  borderBottomLeftRadius: 12,
+  borderBottomRightRadius: 12,
+  backgroundColor: 'blue',
+  flex: 4.5,
+};
+
+const cardStyles = StyleSheet.create({
+  profileHeader,
+  profileInfo,
+  mainContent,
+});

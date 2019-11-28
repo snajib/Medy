@@ -13,7 +13,7 @@ export interface IEmployerState {
 export interface IEmployee {
   name: string;
   description: string;
-  jobTitle: string;
+  jobTitle?: string;
   profilePicture?: ImageURISource;
   rating?: number;
 }
