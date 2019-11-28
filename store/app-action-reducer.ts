@@ -16,6 +16,8 @@ export interface IEmployee {
   jobTitle?: string;
   profilePicture?: ImageURISource;
   rating?: number;
+  summary?: string;
+  experience?: string;
 }
 
 export interface IPosting {
