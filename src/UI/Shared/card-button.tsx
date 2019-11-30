@@ -9,7 +9,7 @@ export interface ICardButtonProps {
 export class CardButton extends React.Component<ICardButtonProps> {
   render() {
     switch (this.props.type) {
-      case 'add':
+      case 'remove':
         return (
           <View
             style={{
@@ -26,7 +26,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
             }}
           >
             <Ionicons
-              name='ios-add'
+              name='ios-close'
               size={30}
               style={{
                 paddingHorizontal: 15,
@@ -62,7 +62,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
             />
           </View>
         );
-      case 'remove':
+      case 'add':
         return (
           <View
             style={{
@@ -79,7 +79,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
             }}
           >
             <Ionicons
-              name='ios-close'
+              name='ios-add'
               size={30}
               style={{
                 paddingHorizontal: 15,

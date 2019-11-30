@@ -1,7 +1,8 @@
 import React from 'react';
 import { HorizontalScroll } from '../Shared/horizontal-scroll';
 import { IEmployee } from '../../../store/app-action-reducer';
-import { ImageBackground } from 'react-native';
+import { View } from 'react-native';
+import { styles } from '../Shared/styles';
 
 export interface IEmployerFinderScreenProps {
   EmployeeList: IEmployee[];
@@ -14,15 +15,12 @@ export class EmployerFinderScreen extends React.Component<
 
   render() {
     return (
-      <ImageBackground
-        source={require('../../../assets/background-gradient.png')}
-        style={{ flex: 1 }}
-      >
+      <View style={styles.topPrimaryContainterStyle}>
         <HorizontalScroll
           style='finderDefaultCardStyle'
           employeeList={this.props.EmployeeList}
         />
-      </ImageBackground>
+      </View>
     );
   }
 }

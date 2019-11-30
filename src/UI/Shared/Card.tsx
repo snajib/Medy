@@ -129,10 +129,14 @@ export class Card extends React.Component<ICardProps> {
   public renderExperience = () => {
     return this.props.experience.map(experience => {
       return (
-        <View>
-          <Text>{experience.title}</Text>
-          <Text>{experience.company}</Text>
-          <Text>
+        <View style={{ padding: '2%' }}>
+          <Text style={cardStyles.mainContentExperienceTitle}>
+            {experience.title}
+          </Text>
+          <Text style={cardStyles.mainContentExperienceRest}>
+            {experience.company}
+          </Text>
+          <Text style={cardStyles.mainContentExperienceRest}>
             {experience.startDate} - {experience.endDate}
           </Text>
         </View>
@@ -160,13 +164,23 @@ export class Card extends React.Component<ICardProps> {
             Experience
           </Text>
           <View style={cardStyles.mainContentExperienceBody}>
-            <ScrollView>{this.renderExperience()}</ScrollView>
+            <ScrollView>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  flexWrap: 'wrap',
+                  alignContent: 'space-between',
+                }}
+              >
+                {this.renderExperience()}
+              </View>
+            </ScrollView>
           </View>
         </View>
         <View style={cardStyles.profileCardButtonView}>
-          <CardButton type={'add'} />
-          <CardButton type={'expand'} />
           <CardButton type={'remove'} />
+          <CardButton type={'expand'} />
+          <CardButton type={'add'} />
         </View>
       </View>
     );
@@ -221,6 +235,14 @@ const mainContentHeaders: TextStyle = {
   marginTop: '3%',
 };
 
+const mainContentSummary: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  padding: '3%',
+  color: '#9F9F9F',
+  fontWeight: '500',
+};
+
 const mainContentSummaryBody: ViewStyle = {
   borderRadius: 12,
   //TODO: This height percentage matches with entire screen, no view its within. FIX
@@ -231,30 +253,37 @@ const mainContentSummaryBody: ViewStyle = {
   alignItems: 'flex-start',
 };
 
-const mainContentExperienceBody: ViewStyle = {
-  borderRadius: 12,
-  //TODO: This height percentage matches with entire screen, no view its within. FIX
-  // height: '30%',
-  width: '90%',
-  maxHeight: '20%',
-  alignSelf: 'center',
-  alignItems: 'flex-start',
-};
-
-const mainContentSummary: TextStyle = {
-  textAlign: 'justify',
-  alignSelf: 'flex-start',
-  padding: '3%',
-  color: '#9F9F9F',
-  fontWeight: '500',
-};
-
 const mainContentExperience: TextStyle = {
   textAlign: 'justify',
   alignSelf: 'flex-start',
-  padding: '3%',
+  paddingLeft: '3%',
   color: '#9F9F9F',
   fontWeight: '500',
+};
+
+const mainContentExperienceTitle: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  paddingLeft: '3%',
+  color: 'black',
+  fontSize: 15,
+  fontWeight: '600',
+};
+
+const mainContentExperienceRest: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  paddingLeft: '3%',
+  color: '#9F9F9F',
+  fontSize: 12,
+  fontWeight: '600',
+};
+
+const mainContentExperienceBody: ViewStyle = {
+  borderRadius: 12,
+  width: '90%',
+  alignSelf: 'center',
+  alignItems: 'flex-start',
 };
 
 const cardStyles = StyleSheet.create({
@@ -263,6 +292,8 @@ const cardStyles = StyleSheet.create({
   mainContentExperienceBody,
   mainContentSummary,
   mainContentExperience,
+  mainContentExperienceTitle,
+  mainContentExperienceRest,
   mainContentHeaders,
   profileCardButtonView,
   profileHeader,

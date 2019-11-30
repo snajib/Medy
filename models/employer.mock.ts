@@ -18,7 +18,7 @@ const mockEmployee1: IEmployee = {
   },
   rating: 5,
   summary:
-    'I like to telhas my teez a lot and I have a lot of experience with EDBTZ. With this experience, I have acheived my final form as a teez; Super Teez God. I was able to defeat even Jiren, master of teez with the help of Vegeta and Goku; fellow teez.',
+    'Summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary ',
 
   experience: [
     {
@@ -30,7 +30,7 @@ const mockEmployee1: IEmployee = {
       endDate: 'Present',
     },
     {
-      title: 'Nurse',
+      title: 'Dental Assistant',
       company: 'XYZ Offices',
       employementType: 'Full-Time',
       location: 'Michigan',
@@ -38,7 +38,7 @@ const mockEmployee1: IEmployee = {
       endDate: 'Dec 2016',
     },
     {
-      title: 'Nurse',
+      title: 'Anesthesiologist',
       company: '123 Offices',
       employementType: 'Full-Time',
       location: 'Michigan',
@@ -58,7 +58,7 @@ const mockEmployee2: IEmployee = {
   },
   rating: 4,
   summary:
-    'I have a lot of experience with helping people telhas my teez, and love having EDBTZ. I am great at helping people get their ED into their TZ. I also have experience at ram ranch, and other similar places.',
+    'Summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary summary ',
   experience: [
     {
       title: 'Doctor',

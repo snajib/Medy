@@ -54,7 +54,7 @@ const finderDefaultCardStyle: ViewStyle = {
   width: width - 100,
 };
 
-const homeSandwichCardStyle: ViewStyle = {
+const homeCardStyle: ViewStyle = {
   backgroundColor: '#fff',
   borderRadius: 12,
   shadowColor: '#000',
@@ -107,7 +107,7 @@ export const styles = StyleSheet.create({
   finderDefaultCardStyle,
   centerText,
   titleText,
-  homeSandwichCardStyle,
+  homeCardStyle,
   finderSandwichCardStyle,
   wholeDefaultCardStyle,
   topAccordionContainer,

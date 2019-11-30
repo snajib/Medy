@@ -29,6 +29,10 @@ export interface IEmployeeExperience {
   endDate: string;
 }
 
+export interface IHome {
+  name: string;
+}
+
 export interface IPosting {
   dateExp?: Date;
   description: string;
