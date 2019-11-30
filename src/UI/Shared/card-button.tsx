@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export interface ICardButtonProps {
   type: 'add' | 'expand' | 'remove';
@@ -21,8 +22,19 @@ export class CardButton extends React.Component<ICardButtonProps> {
               marginBottom: -40,
               marginTop: 12,
               marginHorizontal: 5,
+              justifyContent: 'center',
             }}
-          />
+          >
+            <Ionicons
+              name='ios-add'
+              size={30}
+              style={{
+                paddingHorizontal: 15,
+                color: 'white',
+                alignSelf: 'center',
+              }}
+            />
+          </View>
         );
       case 'expand':
         return (
@@ -36,8 +48,19 @@ export class CardButton extends React.Component<ICardButtonProps> {
               borderColor: 'white',
               marginBottom: -35,
               marginHorizontal: 5,
+              justifyContent: 'center',
             }}
-          />
+          >
+            <Ionicons
+              name='ios-expand'
+              size={30}
+              style={{
+                paddingHorizontal: 15,
+                color: 'white',
+                alignSelf: 'center',
+              }}
+            />
+          </View>
         );
       case 'remove':
         return (
@@ -52,8 +75,19 @@ export class CardButton extends React.Component<ICardButtonProps> {
               marginBottom: -40,
               marginTop: 12,
               marginHorizontal: 5,
+              justifyContent: 'center',
             }}
-          />
+          >
+            <Ionicons
+              name='ios-close'
+              size={30}
+              style={{
+                paddingHorizontal: 15,
+                color: 'white',
+                alignSelf: 'center',
+              }}
+            />
+          </View>
         );
     }
   }

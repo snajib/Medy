@@ -127,19 +127,17 @@ export class Card extends React.Component<ICardProps> {
   };
 
   public renderExperience = () => {
-    // this.props.experience!.forEach(experience => {
-    //   return (
-    //     <View>
-    //       <Text>{experience.title}</Text>
-    //       <Text>{experience.company}</Text>
-    //       <Text>
-    //         {experience.startDate} - {experience.endDate}
-    //       </Text>
-    //     </View>
-    //   );
-    // });
-
-    return <Text>{this.props.experience.toString()}</Text>;
+    return this.props.experience.map(experience => {
+      return (
+        <View>
+          <Text>{experience.title}</Text>
+          <Text>{experience.company}</Text>
+          <Text>
+            {experience.startDate} - {experience.endDate}
+          </Text>
+        </View>
+      );
+    });
   };
 
   public renderDefaultCards = () => {
@@ -150,7 +148,7 @@ export class Card extends React.Component<ICardProps> {
           <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
             Summary
           </Text>
-          <View style={cardStyles.mainContentCardSectionBody}>
+          <View style={cardStyles.mainContentSummaryBody}>
             <ScrollView>
               <Text style={cardStyles.mainContentSummary}>
                 {this.props.summary}
@@ -161,7 +159,7 @@ export class Card extends React.Component<ICardProps> {
           <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
             Experience
           </Text>
-          <View style={cardStyles.mainContentCardSectionBody}>
+          <View style={cardStyles.mainContentExperienceBody}>
             <ScrollView>{this.renderExperience()}</ScrollView>
           </View>
         </View>
@@ -223,7 +221,17 @@ const mainContentHeaders: TextStyle = {
   marginTop: '3%',
 };
 
-const mainContentCardSectionBody: ViewStyle = {
+const mainContentSummaryBody: ViewStyle = {
+  borderRadius: 12,
+  //TODO: This height percentage matches with entire screen, no view its within. FIX
+  // height: '30%',
+  width: '90%',
+  maxHeight: '20%',
+  alignSelf: 'center',
+  alignItems: 'flex-start',
+};
+
+const mainContentExperienceBody: ViewStyle = {
   borderRadius: 12,
   //TODO: This height percentage matches with entire screen, no view its within. FIX
   // height: '30%',
@@ -241,10 +249,20 @@ const mainContentSummary: TextStyle = {
   fontWeight: '500',
 };
 
+const mainContentExperience: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  padding: '3%',
+  color: '#9F9F9F',
+  fontWeight: '500',
+};
+
 const cardStyles = StyleSheet.create({
   mainContent,
-  mainContentCardSectionBody,
+  mainContentSummaryBody,
+  mainContentExperienceBody,
   mainContentSummary,
+  mainContentExperience,
   mainContentHeaders,
   profileCardButtonView,
   profileHeader,
