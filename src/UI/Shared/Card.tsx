@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import { CardButton } from './card-button';
+import { ScrollView } from 'react-native-gesture-handler';
+import { IEmployeeExperience } from '../../../store/app-action-reducer';
 
 export interface ICardProps {
   style?: string;
@@ -18,7 +20,7 @@ export interface ICardProps {
   jobTitle?: string;
   rating?: number;
   summary?: string;
-  experience?: string;
+  experience?: IEmployeeExperience[];
   key: string;
 }
 
@@ -77,6 +79,7 @@ class SectionDivider extends React.Component {
           borderWidth: 1,
           height: 1,
           width: '80%',
+          marginTop: '3%',
           marginLeft: '15%',
         }}
       />
@@ -123,6 +126,22 @@ export class Card extends React.Component<ICardProps> {
     );
   };
 
+  public renderExperience = () => {
+    // this.props.experience!.forEach(experience => {
+    //   return (
+    //     <View>
+    //       <Text>{experience.title}</Text>
+    //       <Text>{experience.company}</Text>
+    //       <Text>
+    //         {experience.startDate} - {experience.endDate}
+    //       </Text>
+    //     </View>
+    //   );
+    // });
+
+    return <Text>{this.props.experience.toString()}</Text>;
+  };
+
   public renderDefaultCards = () => {
     return (
       <View style={styles.finderDefaultCardStyle}>
@@ -132,16 +151,18 @@ export class Card extends React.Component<ICardProps> {
             Summary
           </Text>
           <View style={cardStyles.mainContentCardSectionBody}>
-            <Text style={cardStyles.mainContentSummary}>
-              {this.props.summary}
-            </Text>
+            <ScrollView>
+              <Text style={cardStyles.mainContentSummary}>
+                {this.props.summary}
+              </Text>
+            </ScrollView>
           </View>
           <SectionDivider />
           <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
             Experience
           </Text>
           <View style={cardStyles.mainContentCardSectionBody}>
-            <Text>{this.props.experience}</Text>
+            <ScrollView>{this.renderExperience()}</ScrollView>
           </View>
         </View>
         <View style={cardStyles.profileCardButtonView}>
@@ -161,7 +182,7 @@ export class Card extends React.Component<ICardProps> {
         return this.renderSandwichCards();
       default:
         //TODO: Fix this to something else, idk
-        return <View></View>;
+        return <View />;
     }
     // );
     // } else if (this.props.style == 'finderSandwichCardStyle') {
@@ -199,7 +220,7 @@ const mainContentHeaders: TextStyle = {
   color: '#464343',
   fontWeight: '800',
   fontSize: 18,
-  marginTop: 5,
+  marginTop: '3%',
 };
 
 const mainContentCardSectionBody: ViewStyle = {
@@ -207,6 +228,7 @@ const mainContentCardSectionBody: ViewStyle = {
   //TODO: This height percentage matches with entire screen, no view its within. FIX
   // height: '30%',
   width: '90%',
+  maxHeight: '20%',
   alignSelf: 'center',
   alignItems: 'flex-start',
 };
@@ -219,27 +241,11 @@ const mainContentSummary: TextStyle = {
   fontWeight: '500',
 };
 
-const mainContentCardExperience: ViewStyle = {
-  borderRadius: 12,
-  padding: '5%',
-  backgroundColor: 'white',
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 3 },
-  shadowOpacity: 0.8,
-  shadowRadius: 3,
-  //TODO: This height percentage matches with entire screen, no view its within. FIX
-  height: '50%',
-  width: '90%',
-  justifyContent: 'center',
-  alignSelf: 'center',
-};
-
 const cardStyles = StyleSheet.create({
   mainContent,
   mainContentCardSectionBody,
   mainContentSummary,
   mainContentHeaders,
-  mainContentCardExperience,
   profileCardButtonView,
   profileHeader,
   profileInfo,

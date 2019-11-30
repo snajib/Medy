@@ -17,7 +17,16 @@ export interface IEmployee {
   profilePicture?: ImageURISource;
   rating?: number;
   summary?: string;
-  experience?: string;
+  experience?: IEmployeeExperience[];
+}
+
+export interface IEmployeeExperience {
+  title: string;
+  company: string;
+  employementType?: string;
+  location?: string;
+  startDate: string;
+  endDate: string;
 }
 
 export interface IPosting {

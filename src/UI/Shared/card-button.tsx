@@ -19,7 +19,8 @@ export class CardButton extends React.Component<ICardButtonProps> {
               borderWidth: 3,
               borderColor: 'white',
               marginBottom: -40,
-              marginHorizontal: 7,
+              marginTop: 12,
+              marginHorizontal: 5,
             }}
           />
         );
@@ -33,8 +34,8 @@ export class CardButton extends React.Component<ICardButtonProps> {
               backgroundColor: '#6296E8',
               borderWidth: 3,
               borderColor: 'white',
-              marginBottom: -40,
-              marginHorizontal: 7,
+              marginBottom: -35,
+              marginHorizontal: 5,
             }}
           />
         );
@@ -49,7 +50,8 @@ export class CardButton extends React.Component<ICardButtonProps> {
               borderWidth: 3,
               borderColor: 'white',
               marginBottom: -40,
-              marginHorizontal: 7,
+              marginTop: 12,
+              marginHorizontal: 5,
             }}
           />
         );
