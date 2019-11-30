@@ -9,6 +9,7 @@ import {
   TextStyle,
 } from 'react-native';
 import { styles } from './styles';
+import { CardButton } from './card-button';
 
 export interface ICardProps {
   style?: string;
@@ -60,6 +61,23 @@ class RatingCircle extends React.Component {
           borderRadius: 5,
           backgroundColor: '#464343',
           marginRight: 2,
+        }}
+      />
+    );
+  }
+}
+
+class SectionDivider extends React.Component {
+  public render() {
+    return (
+      <View
+        style={{
+          borderColor: '#e6e6e6',
+          borderWidth: 1,
+          height: 1,
+          marginBottom: 5,
+          width: '80%',
+          marginLeft: '15%',
         }}
       />
     );
@@ -118,12 +136,18 @@ export class Card extends React.Component<ICardProps> {
               {this.props.summary}
             </Text>
           </View>
+          <SectionDivider />
           <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
             Experience
           </Text>
           <View style={cardStyles.mainContentCardSectionBody}>
             <Text>{this.props.experience}</Text>
           </View>
+        </View>
+        <View style={cardStyles.profileCardButtonView}>
+          <CardButton type={'add'} />
+          <CardButton type={'expand'} />
+          <CardButton type={'remove'} />
         </View>
       </View>
     );
@@ -153,6 +177,11 @@ const profileHeader: ViewStyle = {
   backgroundColor: 'white',
   flex: 1,
   flexDirection: 'row',
+};
+
+const profileCardButtonView: ViewStyle = {
+  flexDirection: 'row',
+  justifyContent: 'center',
 };
 
 const profileInfo: TextStyle = {
@@ -205,11 +234,12 @@ const mainContentCardExperience: ViewStyle = {
 };
 
 const cardStyles = StyleSheet.create({
-  profileHeader,
-  profileInfo,
   mainContent,
   mainContentCardSectionBody,
   mainContentSummary,
   mainContentHeaders,
   mainContentCardExperience,
+  profileCardButtonView,
+  profileHeader,
+  profileInfo,
 });
