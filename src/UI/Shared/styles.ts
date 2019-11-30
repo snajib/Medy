@@ -42,7 +42,7 @@ const wholeDefaultCardStyle: ViewStyle = {
 
 const finderDefaultCardStyle: ViewStyle = {
   backgroundColor: '#fff',
-  borderRadius: 12,
+  borderRadius: 25,
   shadowColor: '#000',
   shadowOffset: { width: 0, height: 3 },
   shadowOpacity: 0.8,

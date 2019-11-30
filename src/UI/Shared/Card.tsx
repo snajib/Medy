@@ -37,10 +37,10 @@ class ProfilePicture extends React.Component<IProfilePictureProps> {
         style={{
           height: 150,
           width: 150,
-          borderWidth: 10,
+          borderWidth: 8,
           borderColor: 'white',
           borderRadius: 75,
-          marginTop: -50,
+          marginTop: -40,
           marginLeft: 15,
           alignSelf: 'flex-start',
         }}
@@ -58,7 +58,7 @@ class RatingCircle extends React.Component {
           width: 10,
           height: 10,
           borderRadius: 5,
-          backgroundColor: 'black',
+          backgroundColor: '#464343',
           marginRight: 2,
         }}
       />
@@ -76,11 +76,19 @@ export class Card extends React.Component<ICardProps> {
       <View style={cardStyles.profileHeader}>
         <ProfilePicture profilePictureUri={this.props.profilePicture!} />
         <View style={cardStyles.profileInfo}>
-          <Text style={{ fontWeight: '600', fontSize: 18 }}>
+          <Text
+            style={{
+              color: '#464343',
+              fontWeight: '700',
+              fontSize: 18,
+            }}
+          >
             {this.props.profileName}
           </Text>
           <View style={{ flexDirection: 'row' }}>
-            <Text style={{ fontWeight: '300', marginRight: 10 }}>
+            <Text
+              style={{ color: '#9F9F9F', fontWeight: '400', marginRight: 10 }}
+            >
               {this.props.jobTitle}
             </Text>
             <View
@@ -102,14 +110,18 @@ export class Card extends React.Component<ICardProps> {
       <View style={styles.finderDefaultCardStyle}>
         {this.renderCardHeading()}
         <View style={cardStyles.mainContent}>
-          <Text style={cardStyles.mainContentHeaders}>Summary</Text>
-          <View style={cardStyles.mainContentCardSummary}>
+          <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
+            Summary
+          </Text>
+          <View style={cardStyles.mainContentCardSectionBody}>
             <Text style={cardStyles.mainContentSummary}>
               {this.props.summary}
             </Text>
           </View>
-          <Text style={cardStyles.mainContentHeaders}>Experience</Text>
-          <View style={cardStyles.mainContentCardExperience}>
+          <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
+            Experience
+          </Text>
+          <View style={cardStyles.mainContentCardSectionBody}>
             <Text>{this.props.experience}</Text>
           </View>
         </View>
@@ -136,8 +148,8 @@ export class Card extends React.Component<ICardProps> {
 }
 
 const profileHeader: ViewStyle = {
-  borderTopLeftRadius: 12,
-  borderTopRightRadius: 12,
+  borderTopLeftRadius: 25,
+  borderTopRightRadius: 25,
   backgroundColor: 'white',
   flex: 1,
   flexDirection: 'row',
@@ -155,21 +167,15 @@ const mainContent: ViewStyle = {
 };
 
 const mainContentHeaders: TextStyle = {
-  color: '#6296E8',
-  fontWeight: 'bold',
-  fontSize: 20,
-  padding: '2.5%',
+  color: '#464343',
+  fontWeight: '800',
+  fontSize: 18,
 };
 
-const mainContentCardSummary: ViewStyle = {
+const mainContentCardSectionBody: ViewStyle = {
   borderRadius: 12,
-  backgroundColor: 'white',
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 3 },
-  shadowOpacity: 0.8,
-  shadowRadius: 3,
   //TODO: This height percentage matches with entire screen, no view its within. FIX
-  height: '30%',
+  // height: '30%',
   width: '90%',
   alignSelf: 'center',
   alignItems: 'flex-start',
@@ -179,6 +185,8 @@ const mainContentSummary: TextStyle = {
   textAlign: 'justify',
   alignSelf: 'flex-start',
   padding: '3%',
+  color: '#9F9F9F',
+  fontWeight: '500',
 };
 
 const mainContentCardExperience: ViewStyle = {
@@ -200,7 +208,7 @@ const cardStyles = StyleSheet.create({
   profileHeader,
   profileInfo,
   mainContent,
-  mainContentCardSummary,
+  mainContentCardSectionBody,
   mainContentSummary,
   mainContentHeaders,
   mainContentCardExperience,
