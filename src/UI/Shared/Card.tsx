@@ -176,6 +176,13 @@ export class Card extends React.Component<ICardProps> {
               </View>
             </ScrollView>
           </View>
+          <SectionDivider />
+          <Text style={{ ...cardStyles.mainContentHeaders, marginLeft: '7%' }}>
+            Reviews
+          </Text>
+          <View style={cardStyles.mainContentReviewBody}>
+            <Text style={cardStyles.mainContentReviewText}>No reviews yet</Text>
+          </View>
         </View>
         <View style={cardStyles.profileCardButtonView}>
           <CardButton type={'remove'} />
@@ -286,15 +293,32 @@ const mainContentExperienceBody: ViewStyle = {
   alignItems: 'flex-start',
 };
 
+const mainContentReviewBody: ViewStyle = {
+  borderRadius: 12,
+  width: '90%',
+  alignSelf: 'center',
+  alignItems: 'flex-start',
+};
+
+const mainContentReviewText: TextStyle = {
+  textAlign: 'justify',
+  alignSelf: 'flex-start',
+  padding: '3%',
+  color: '#9F9F9F',
+  fontWeight: '500',
+};
+
 const cardStyles = StyleSheet.create({
   mainContent,
+  mainContentHeaders,
   mainContentSummaryBody,
   mainContentExperienceBody,
   mainContentSummary,
   mainContentExperience,
   mainContentExperienceTitle,
   mainContentExperienceRest,
-  mainContentHeaders,
+  mainContentReviewBody,
+  mainContentReviewText,
   profileCardButtonView,
   profileHeader,
   profileInfo,
