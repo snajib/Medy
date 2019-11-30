@@ -43,6 +43,7 @@ class ProfilePicture extends React.Component<IProfilePictureProps> {
           borderRadius: 75,
           marginTop: -40,
           marginLeft: 15,
+          marginBottom: 20,
           alignSelf: 'flex-start',
         }}
         source={this.props.profilePictureUri}
@@ -75,7 +76,6 @@ class SectionDivider extends React.Component {
           borderColor: '#e6e6e6',
           borderWidth: 1,
           height: 1,
-          marginBottom: 5,
           width: '80%',
           marginLeft: '15%',
         }}
@@ -199,6 +199,7 @@ const mainContentHeaders: TextStyle = {
   color: '#464343',
   fontWeight: '800',
   fontSize: 18,
+  marginTop: 5,
 };
 
 const mainContentCardSectionBody: ViewStyle = {
