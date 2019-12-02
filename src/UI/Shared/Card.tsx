@@ -59,8 +59,8 @@ class RatingCircle extends React.Component {
     return (
       <View
         style={{
-          width: 10,
-          height: 10,
+          width: 11,
+          height: 11,
           borderRadius: 5,
           backgroundColor: '#464343',
           marginRight: 2,
@@ -112,14 +112,15 @@ export class Card extends React.Component<ICardProps> {
             >
               {this.props.jobTitle}
             </Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                marginTop: 4,
-              }}
-            >
-              {Array(this.props.rating).fill(<RatingCircle />)}
-            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 4,
+              paddingTop: 5,
+            }}
+          >
+            {Array(this.props.rating).fill(<RatingCircle />)}
           </View>
         </View>
       </View>
