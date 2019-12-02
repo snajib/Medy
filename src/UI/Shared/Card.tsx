@@ -54,6 +54,27 @@ class ProfilePicture extends React.Component<IProfilePictureProps> {
   }
 }
 
+class ProfilePictureSandwich extends React.Component<IProfilePictureProps> {
+  public render() {
+    return (
+      <Image
+        style={{
+          height: 150,
+          width: 150,
+          borderWidth: 8,
+          borderColor: 'white',
+          borderRadius: 75,
+          alignSelf: 'flex-start',
+          marginTop: -20,
+          marginLeft: -30,
+          marginBottom: -30,
+        }}
+        source={this.props.profilePictureUri}
+      />
+    );
+  }
+}
+
 class RatingCircle extends React.Component {
   public render() {
     return (
@@ -88,10 +109,6 @@ class SectionDivider extends React.Component {
 }
 
 export class Card extends React.Component<ICardProps> {
-  public renderSandwichCards = () => {
-    return <View style={styles.finderSandwichCardStyle}></View>;
-  };
-
   public renderCardHeading = () => {
     return (
       <View style={cardStyles.profileHeader}>
@@ -143,6 +160,43 @@ export class Card extends React.Component<ICardProps> {
         </View>
       );
     });
+  };
+
+  public renderSandwichCards = () => {
+    return (
+      <View style={cardStyles.sandwichStyle}>
+        <ProfilePictureSandwich
+          profilePictureUri={this.props.profilePicture!}
+        />
+        <View style={cardStyles.profileInfo}>
+          <Text
+            style={{
+              color: '#464343',
+              fontWeight: '700',
+              fontSize: 18,
+            }}
+          >
+            {this.props.profileName}
+          </Text>
+          <View style={{ flexDirection: 'row' }}>
+            <Text
+              style={{ color: '#9F9F9F', fontWeight: '400', marginRight: 10 }}
+            >
+              {this.props.jobTitle}
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginTop: 4,
+              paddingTop: 5,
+            }}
+          >
+            {Array(this.props.rating).fill(<RatingCircle />)}
+          </View>
+        </View>
+      </View>
+    );
   };
 
   public renderDefaultCards = () => {
@@ -204,13 +258,22 @@ export class Card extends React.Component<ICardProps> {
         //TODO: Fix this to something else, idk
         return <View />;
     }
-    // );
-    // } else if (this.props.style == 'finderSandwichCardStyle') {
-    //   return this.renderSandwichCards();
-    // } else {
-    // }
   }
 }
+
+const sandwichStyle: ViewStyle = {
+  marginLeft: '10%',
+  marginRight: '8%',
+  marginTop: '8%',
+  marginBottom: '8%',
+  borderRadius: 25,
+  backgroundColor: 'white',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 3 },
+  shadowOpacity: 0.8,
+  flex: 1,
+  flexDirection: 'row',
+};
 
 const profileHeader: ViewStyle = {
   borderTopLeftRadius: 25,
@@ -226,8 +289,9 @@ const profileCardButtonView: ViewStyle = {
 };
 
 const profileInfo: TextStyle = {
-  paddingTop: '5%',
-  paddingLeft: '5%',
+  paddingTop: '7%',
+  paddingLeft: '7%',
+  paddingRight: '7%',
 };
 
 const mainContent: ViewStyle = {
@@ -310,6 +374,7 @@ const mainContentReviewText: TextStyle = {
 };
 
 const cardStyles = StyleSheet.create({
+  sandwichStyle,
   mainContent,
   mainContentHeaders,
   mainContentSummaryBody,

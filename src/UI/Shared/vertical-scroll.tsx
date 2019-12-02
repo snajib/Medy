@@ -24,7 +24,10 @@ export class VerticalScroll extends React.Component<Props> {
           <Card
             key={uuid.create().toString()}
             style={this.props.style}
+            profilePicture={profile.profilePicture}
             profileName={profile.name}
+            jobTitle={profile.jobTitle}
+            rating={profile.rating}
           />
         );
       });
