@@ -168,7 +168,7 @@ export class Card extends React.Component<ICardProps> {
         <ProfilePictureSandwich
           profilePictureUri={this.props.profilePicture!}
         />
-        <View style={cardStyles.profileInfo}>
+        <View style={cardStyles.profileInfoSandwich}>
           <Text
             style={{
               color: '#464343',
@@ -266,6 +266,8 @@ const sandwichStyle: ViewStyle = {
   marginRight: '8%',
   marginTop: '8%',
   marginBottom: '8%',
+  paddingLeft: '5%',
+  paddingRight: '5%',
   borderRadius: 25,
   backgroundColor: 'white',
   shadowColor: '#000',
@@ -292,6 +294,12 @@ const profileInfo: TextStyle = {
   paddingTop: '7%',
   paddingLeft: '7%',
   paddingRight: '7%',
+};
+
+const profileInfoSandwich: TextStyle = {
+  paddingTop: '7%',
+  paddingLeft: '6%',
+  paddingRight: '20%',
 };
 
 const mainContent: ViewStyle = {
@@ -375,6 +383,7 @@ const mainContentReviewText: TextStyle = {
 
 const cardStyles = StyleSheet.create({
   sandwichStyle,
+  profileInfoSandwich,
   mainContent,
   mainContentHeaders,
   mainContentSummaryBody,
