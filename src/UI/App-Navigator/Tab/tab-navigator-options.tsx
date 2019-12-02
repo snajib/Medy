@@ -35,3 +35,17 @@ export const tabBarOptions = {
     inactiveTintColor: 'gray',
   },
 };
+
+/*
+indicatorStyle: {
+      backgroundColor: 'transparent',
+    },
+    style: {
+      backgroundColor: 'rgb(128,128,128,0.5);', //rgba(0, 0, 1, 0.2)',
+      borderTopWidth: 3,
+      borderTopColor: 'transparent',
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      bottom: 0,
+    },*/
