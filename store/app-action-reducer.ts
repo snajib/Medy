@@ -1,9 +1,10 @@
-import { AppReducerActionKeys } from "./app-action-reducer.actions";
+import { AppReducerActionKeys } from './app-action-reducer.actions';
 import {
   mockEmployeeList,
   mockEmployer,
-  mockPostingList
-} from "../models/employer.mock";
+  mockPostingList,
+} from '../models/employer.mock';
+import { ImageURISource } from 'react-native';
 
 export interface IEmployerState {
   name: string;
@@ -12,8 +13,24 @@ export interface IEmployerState {
 export interface IEmployee {
   name: string;
   description: string;
-  jobTitle: string;
+  jobTitle?: string;
+  profilePicture?: ImageURISource;
   rating?: number;
+  summary?: string;
+  experience?: IEmployeeExperience[];
+}
+
+export interface IEmployeeExperience {
+  title: string;
+  company: string;
+  employementType?: string;
+  location?: string;
+  startDate: string;
+  endDate: string;
+}
+
+export interface IHome {
+  name: string;
 }
 
 export interface IPosting {
@@ -43,7 +60,7 @@ export type EmployerActionTypes = ISuperListAdd | ISuperListRemove;
 export const DefaultEmployerPricingState: IEmployerApplicationState = {
   employeeList: mockEmployeeList,
   employer: mockEmployer,
-  postingList: mockPostingList
+  postingList: mockPostingList,
 };
 
 export const appActionReducer = (

@@ -8,8 +8,12 @@ export class EmployerHomeScreen extends React.Component {
     return (
       <View style={styles.topPrimaryContainterStyle}>
         <VerticalScroll
-          style={styles.homeSandwichCardStyle}
-          schema={['Calender', 'Statistics', 'Performance']}
+          style='homeCardStyle'
+          homeList={[
+            { name: 'Home' },
+            { name: 'Statistics' },
+            { name: 'Performance' },
+          ]}
           snapToInterval={height - 500}
         />
       </View>

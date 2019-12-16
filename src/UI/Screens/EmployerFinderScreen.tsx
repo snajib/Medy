@@ -1,8 +1,8 @@
-import React from "react";
-import { View } from "react-native";
-import { styles } from "../Shared/styles";
-import { HorizontalScroll } from "../Shared/horizontal-scroll";
-import { IEmployee } from "../../../store/app-action-reducer";
+import React from 'react';
+import { HorizontalScroll } from '../Shared/horizontal-scroll';
+import { IEmployee } from '../../../store/app-action-reducer';
+import { View } from 'react-native';
+import { styles } from '../Shared/styles';
 
 export interface IEmployerFinderScreenProps {
   EmployeeList: IEmployee[];
@@ -17,8 +17,8 @@ export class EmployerFinderScreen extends React.Component<
     return (
       <View style={styles.topPrimaryContainterStyle}>
         <HorizontalScroll
-          style={styles.finderDefaultCardStyle}
-          schema={this.empList}
+          style='finderDefaultCardStyle'
+          employeeList={this.props.EmployeeList}
         />
       </View>
     );

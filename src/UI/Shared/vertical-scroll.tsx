@@ -1,25 +1,37 @@
 import React from 'react';
-import { ScrollView, ViewStyle, StyleProp } from 'react-native';
+import { ScrollView } from 'react-native';
 import uuid from 'uuid-js';
 import { Card } from './Card';
+import { HomeCard } from './HomeCard';
+import { IEmployee, IHome } from '../../../store/app-action-reducer';
 
 interface Props {
-  style: StyleProp<ViewStyle>;
-  schema?: string[];
+  style: string;
+  employeeList?: IEmployee[];
+  homeList?: IHome[];
   snapToInterval: number;
 }
 
 export class VerticalScroll extends React.Component<Props> {
-  public renderCards(list: string[]) {
-    return list.map(section => {
-      return (
-        <Card
-          key={uuid.create().toString()}
-          style={this.props.style}
-          profileName={section}
-        />
-      );
-    });
+  public renderCards() {
+    if (this.props.style === 'homeCardStyle') {
+      return this.props.homeList.map(card => {
+        return <HomeCard name={card.name} key={uuid.create().toString()} />;
+      });
+    } else {
+      return this.props.employeeList.map(profile => {
+        return (
+          <Card
+            key={uuid.create().toString()}
+            style={this.props.style}
+            profilePicture={profile.profilePicture}
+            profileName={profile.name}
+            jobTitle={profile.jobTitle}
+            rating={profile.rating}
+          />
+        );
+      });
+    }
   }
 
   render() {
@@ -38,7 +50,7 @@ export class VerticalScroll extends React.Component<Props> {
           bottom: 80,
         }}
       >
-        {this.renderCards(this.props.schema)}
+        {this.renderCards()}
       </ScrollView>
     );
   }

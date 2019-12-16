@@ -18,9 +18,9 @@ describe('Vertical-Scroll', () => {
     const verticalScroll = renderer.create(
       <VerticalScroll
         style={styles.finderSandwichCardStyle}
-        schema={mockSchema}
+        employeeList={mockSchema}
         snapToInterval={0}
-      />,
+      />
     );
     expect(verticalScroll.root.findAllByType(Card).length).toBe(5);
   });
@@ -29,9 +29,9 @@ describe('Vertical-Scroll', () => {
     const verticalScroll = renderer.create(
       <VerticalScroll
         style={styles.finderSandwichCardStyle}
-        schema={mockSchema}
+        employeeList={mockSchema}
         snapToInterval={0}
-      />,
+      />
     );
     expect(verticalScroll.root.findAllByType(ScrollView).length).toBe(1);
     expect(verticalScroll.root.findAllByType(View).length).toBe(11);
@@ -41,9 +41,9 @@ describe('Vertical-Scroll', () => {
     const verticalScroll = renderer.create(
       <VerticalScroll
         style={styles.finderDefaultCardStyle}
-        schema={mockSchema}
+        employeeList={mockSchema}
         snapToInterval={0}
-      />,
+      />
     );
     expect(verticalScroll.toJSON()).toMatchSnapshot();
   });
