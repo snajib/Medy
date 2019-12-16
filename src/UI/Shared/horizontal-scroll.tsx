@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { width } from './styles';
+import { deviceWidth } from './styles';
 import { Card } from './Card';
 import uuid from 'uuid-js';
 import { IEmployee } from '../../../store/app-action-reducer';
@@ -33,7 +33,7 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
         <ScrollView
           horizontal={true}
           decelerationRate={0}
-          snapToInterval={width - 80}
+          snapToInterval={deviceWidth - 80}
           snapToAlignment={'start'}
           centerContent={true}
           showsHorizontalScrollIndicator={false}
