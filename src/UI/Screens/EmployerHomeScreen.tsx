@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { styles, height } from '../Shared/styles';
+import { styles, deviceHeight } from '../Shared/styles';
 import { VerticalScroll } from '../Shared/vertical-scroll';
 
 export class EmployerHomeScreen extends React.Component {
@@ -14,7 +14,7 @@ export class EmployerHomeScreen extends React.Component {
             { name: 'Statistics' },
             { name: 'Performance' },
           ]}
-          snapToInterval={height - 500}
+          snapToInterval={deviceHeight - 500}
         />
       </View>
     );

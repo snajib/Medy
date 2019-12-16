@@ -1,7 +1,7 @@
 import { StyleSheet, ViewStyle, Dimensions, TextStyle } from 'react-native';
 
-export const width = Dimensions.get('window').width;
-export const height = Dimensions.get('window').height;
+export const deviceWidth = Dimensions.get('window').width;
+export const deviceHeight = Dimensions.get('window').height;
 
 const topPrimaryContainterStyle: ViewStyle = {
   flex: 1,
@@ -36,8 +36,8 @@ const wholeDefaultCardStyle: ViewStyle = {
   marginLeft: 0,
   marginRight: 0,
   marginBottom: 0,
-  height: height,
-  width: width,
+  height: deviceHeight,
+  width: deviceWidth,
 };
 
 const finderDefaultCardStyle: ViewStyle = {
@@ -50,8 +50,8 @@ const finderDefaultCardStyle: ViewStyle = {
   marginTop: 100,
   marginLeft: 10,
   marginRight: 10,
-  height: '75%',
-  width: width - 100,
+  height: (deviceHeight * 68) / 100,
+  width: (deviceWidth * 75.8) / 100,
 };
 
 const homeCardStyle: ViewStyle = {
@@ -61,8 +61,8 @@ const homeCardStyle: ViewStyle = {
   shadowOffset: { width: 0, height: 3 },
   shadowOpacity: 0.8,
   shadowRadius: 3,
-  height: height - 450,
-  width: width - 100,
+  height: deviceHeight - 450,
+  width: deviceWidth - 100,
   marginBottom: 40,
 };
 
