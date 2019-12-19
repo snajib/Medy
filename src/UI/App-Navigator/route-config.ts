@@ -1,6 +1,7 @@
 export const names = {
   EmployerHome: 'Home',
   EmployerFinder: 'Finder',
+  EmployerFinderSuperList: 'FinderSuperList',
   EmployerFinderSandwich: 'FinderSandwich',
   EmployerPostings: 'Postings',
   EmployerMore: 'More',
