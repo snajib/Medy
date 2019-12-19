@@ -27,3 +27,11 @@ export const SandwichButton = (navigation: NavigationComponent) =>
   HeaderButton('ios-list', 'white', () =>
     navigation.navigate('FinderSandwichScreen')
   );
+
+export const SuperListButton = (navigation: NavigationComponent) =>
+  HeaderButton('ios-contacts', 'white', () =>
+    navigation.navigate('FinderSuperListScreen')
+  );
+
+export const ExitSuperListButton = (navigation: NavigationComponent) =>
+  HeaderButton('ios-close', 'white', () => navigation.navigate('FinderScreen'));

@@ -1,8 +1,8 @@
 import React from 'react';
-import { HorizontalScroll } from '../Shared/horizontal-scroll';
 import { IEmployee } from '../../../store/app-action-reducer';
 import { View } from 'react-native';
 import { styles } from '../Shared/styles';
+import { ConnectedHorizontalScroll } from '../Shared/horizontal-scroll.connected';
 
 export interface IEmployerFinderScreenProps {
   EmployeeList: IEmployee[];
@@ -16,10 +16,7 @@ export class EmployerFinderScreen extends React.Component<
   render() {
     return (
       <View style={styles.topPrimaryContainterStyle}>
-        <HorizontalScroll
-          style='finderDefaultCardStyle'
-          employeeList={this.props.EmployeeList}
-        />
+        <ConnectedHorizontalScroll />
       </View>
     );
   }

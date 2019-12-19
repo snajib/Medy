@@ -22,6 +22,7 @@ export class VerticalScroll extends React.Component<Props> {
       return this.props.employeeList.map(profile => {
         return (
           <Card
+            employeeId={profile.id}
             key={uuid.create().toString()}
             style={this.props.style}
             profilePicture={profile.profilePicture}

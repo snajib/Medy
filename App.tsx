@@ -1,9 +1,9 @@
-import React from "react";
-import { AppContainer } from "./src/UI/App-Navigator/Drawer/drawer-navigator-configuration";
-import { Provider } from "react-redux";
+import React from 'react';
+import { AppContainer } from './src/UI/App-Navigator/Drawer/drawer-navigator-configuration';
+import { Provider } from 'react-redux';
 // import { buildAppStore } from './store/store';
-import { rootReducer } from "./store/root-reducer";
-import { createStore } from "redux";
+import { rootReducer } from './store/root-reducer';
+import { createStore } from 'redux';
 
 // const AppContainer = createAppContainer(AppNavigator);
 
@@ -27,3 +27,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+console.disableYellowBox = true;
