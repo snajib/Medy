@@ -14,6 +14,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { IEmployeeExperience } from '../../../store/app-action-reducer';
 
 export interface ICardProps {
+  employeeId: string;
   style?: string;
   profilePicture?: ImageURISource;
   profileName?: string;
@@ -22,6 +23,8 @@ export interface ICardProps {
   summary?: string;
   experience?: IEmployeeExperience[];
   key: string;
+  onAddSuperList?: (employeeId: string) => void;
+  onRemoveSuperList?: (employeeId: string) => void;
 }
 
 export enum ProfileCardTypes {
@@ -240,9 +243,21 @@ export class Card extends React.Component<ICardProps> {
           </View>
         </View>
         <View style={cardStyles.profileCardButtonView}>
-          <CardButton type={'remove'} />
-          <CardButton type={'expand'} />
-          <CardButton type={'add'} />
+          <CardButton
+            employeeId={this.props.employeeId}
+            type={'remove'}
+            onPress={this.props.onRemoveSuperList}
+          />
+          <CardButton
+            employeeId={this.props.employeeId}
+            type={'expand'}
+            onPress={this.props.onAddSuperList}
+          />
+          <CardButton
+            employeeId={this.props.employeeId}
+            type={'add'}
+            onPress={this.props.onAddSuperList}
+          />
         </View>
       </View>
     );

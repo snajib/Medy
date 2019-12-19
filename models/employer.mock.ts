@@ -9,6 +9,7 @@ export const mockEmployer: IEmployerState = {
 };
 
 const mockEmployee1: IEmployee = {
+  id: '000001',
   description: 'description',
   jobTitle: 'Nurse',
   name: 'John Doe',
@@ -49,6 +50,7 @@ const mockEmployee1: IEmployee = {
 };
 
 const mockEmployee2: IEmployee = {
+  id: '000001',
   description: 'description',
   jobTitle: 'Doctor',
   name: 'Jane Doe',

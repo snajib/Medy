@@ -1,17 +1,24 @@
 import React from 'react';
-import { View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export interface ICardButtonProps {
   type: 'add' | 'expand' | 'remove';
+  employeeId: string;
 }
 
-export class CardButton extends React.Component<ICardButtonProps> {
+export interface ICardButtonActionProps {
+  onPress: (employeeId: string) => void;
+}
+
+export class CardButton extends React.Component<
+  ICardButtonProps & ICardButtonActionProps
+> {
   render() {
     switch (this.props.type) {
       case 'remove':
         return (
-          <View
+          <TouchableOpacity
             style={{
               width: 50,
               height: 50,
@@ -24,6 +31,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
               marginHorizontal: 5,
               justifyContent: 'center',
             }}
+            onPress={() => this.props.onPress(this.props.employeeId)}
           >
             <Ionicons
               name='ios-close'
@@ -34,11 +42,11 @@ export class CardButton extends React.Component<ICardButtonProps> {
                 alignSelf: 'center',
               }}
             />
-          </View>
+          </TouchableOpacity>
         );
       case 'expand':
         return (
-          <View
+          <TouchableOpacity
             style={{
               width: 80,
               height: 80,
@@ -50,6 +58,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
               marginHorizontal: 5,
               justifyContent: 'center',
             }}
+            onPress={() => this.props.onPress(this.props.employeeId)}
           >
             <Ionicons
               name='ios-expand'
@@ -60,11 +69,11 @@ export class CardButton extends React.Component<ICardButtonProps> {
                 alignSelf: 'center',
               }}
             />
-          </View>
+          </TouchableOpacity>
         );
       case 'add':
         return (
-          <View
+          <TouchableOpacity
             style={{
               width: 50,
               height: 50,
@@ -77,6 +86,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
               marginHorizontal: 5,
               justifyContent: 'center',
             }}
+            onPress={() => this.props.onPress(this.props.employeeId)}
           >
             <Ionicons
               name='ios-add'
@@ -87,7 +97,7 @@ export class CardButton extends React.Component<ICardButtonProps> {
                 alignSelf: 'center',
               }}
             />
-          </View>
+          </TouchableOpacity>
         );
     }
   }

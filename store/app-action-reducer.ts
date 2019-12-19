@@ -11,6 +11,7 @@ export interface IEmployerState {
 }
 
 export interface IEmployee {
+  id: string;
   name: string;
   description: string;
   jobTitle?: string;
@@ -43,31 +44,59 @@ export interface IEmployerApplicationState {
   employer: IEmployerState;
   employeeList: IEmployee[];
   postingList?: IPosting[];
+  superList?: IEmployee[];
 }
 
-export interface ISuperListAdd {
+export interface ISuperListAddEmployeeAction {
   readonly type: AppReducerActionKeys.SUPER_LIST_ADD;
   readonly payload: string;
 }
 
-export interface ISuperListRemove {
+export interface ISuperListRemoveEmployeeAction {
   readonly type: AppReducerActionKeys.SUPER_LIST_REMOVE;
   readonly payload: string;
 }
 
-export type EmployerActionTypes = ISuperListAdd | ISuperListRemove;
+export type EmployerActionTypes =
+  | ISuperListAddEmployeeAction
+  | ISuperListRemoveEmployeeAction;
 
 export const DefaultEmployerPricingState: IEmployerApplicationState = {
   employeeList: mockEmployeeList,
   employer: mockEmployer,
   postingList: mockPostingList,
+  superList: [],
 };
+
+const superListAddEmployeeActionReducer = (
+  state: IEmployerApplicationState = DefaultEmployerPricingState,
+  action: EmployerActionTypes
+) => ({
+  ...state,
+  superList:
+    state.superList.find(emp => emp.id === action.payload) &&
+    state.superList.concat(
+      state.employeeList.find(emp => emp.id === action.payload)
+    ),
+});
+
+const superListRemoveEmployeeActionReducer = (
+  state: IEmployerApplicationState = DefaultEmployerPricingState,
+  action: EmployerActionTypes
+) => ({
+  ...state,
+  superList: state.employeeList.filter(emp => emp.id !== action.payload),
+});
 
 export const appActionReducer = (
   state: IEmployerApplicationState = DefaultEmployerPricingState,
   action: EmployerActionTypes
 ): IEmployerApplicationState => {
   switch (action.type) {
+    case AppReducerActionKeys.SUPER_LIST_ADD:
+      return superListAddEmployeeActionReducer(state, action);
+    case AppReducerActionKeys.SUPER_LIST_REMOVE:
+      return superListRemoveEmployeeActionReducer(state, action);
   }
   return state;
 };

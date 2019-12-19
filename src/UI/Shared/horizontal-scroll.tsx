@@ -5,15 +5,24 @@ import { Card } from './Card';
 import uuid from 'uuid-js';
 import { IEmployee } from '../../../store/app-action-reducer';
 
-interface IHorizontalScrollProps {
+export interface IHorizontalScrollProps {
   style: string;
   employeeList: IEmployee[];
 }
-export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
+
+export interface IHorizontalScrollActionProps {
+  onAddSuperList?: (employeeId: string) => void;
+  onRemoveSuperList?: (employeeId: string) => void;
+}
+
+export class HorizontalScroll extends React.Component<
+  IHorizontalScrollProps & IHorizontalScrollActionProps
+> {
   public renderCards(profileList: IEmployee[]) {
     return profileList.map(profile => {
       return (
         <Card
+          employeeId={profile.id}
           key={uuid.create().toString()}
           style={this.props.style}
           profilePicture={profile.profilePicture}
@@ -22,6 +31,8 @@ export class HorizontalScroll extends React.Component<IHorizontalScrollProps> {
           rating={profile.rating}
           summary={profile.summary}
           experience={profile.experience}
+          onAddSuperList={this.props.onAddSuperList}
+          onRemoveSuperList={this.props.onRemoveSuperList}
         />
       );
     });
