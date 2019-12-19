@@ -44,7 +44,7 @@ export interface IEmployerApplicationState {
   employer: IEmployerState;
   employeeList: IEmployee[];
   postingList?: IPosting[];
-  superList?: IEmployee[];
+  superList: IEmployee[];
 }
 
 export interface ISuperListAddEmployeeAction {
@@ -73,11 +73,9 @@ const superListAddEmployeeActionReducer = (
   action: EmployerActionTypes
 ) => ({
   ...state,
-  superList:
-    state.superList.find(emp => emp.id === action.payload) &&
-    state.superList.concat(
-      state.employeeList.find(emp => emp.id === action.payload)
-    ),
+  superList: state.superList.concat(
+    state.employeeList.find(emp => emp.id === action.payload)
+  ),
 });
 
 const superListRemoveEmployeeActionReducer = (
@@ -85,7 +83,7 @@ const superListRemoveEmployeeActionReducer = (
   action: EmployerActionTypes
 ) => ({
   ...state,
-  superList: state.employeeList.filter(emp => emp.id !== action.payload),
+  superList: state.superList.filter(emp => emp.id !== action.payload),
 });
 
 export const appActionReducer = (

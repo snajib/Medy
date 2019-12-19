@@ -33,6 +33,7 @@ export const finderSandwichStackNavigatorOptions = {
 
 export const finderSuperListStackNavigatorOptions = {
   navigationOptions: ({ navigation }: NavigationComponent) => ({
+    headerLeft: null as any,
     headerRight: ExitSuperListButton(navigation),
     headerTransparent: 'true',
   }),

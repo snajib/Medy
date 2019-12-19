@@ -21,7 +21,7 @@ import {
 } from './stack-navigator-tab-options';
 import { ConnectedEmployerFinderScreen } from '../../Screens/EmployerFinderScreen.connected';
 import { ConnectedEmployerFinderSandwichScreen } from '../../Screens/EmployerFinderSandwichScreen.connected';
-import { EmployerFinderSuperListScreen } from '../../Screens/EmployerFinderSuperListScreen';
+import { ConnectedEmployerFinderSuperListScreen } from '../../Screens/EmployerFinderSuperListScreen.connected';
 
 const screenRoutes = (
   routeName: string,
@@ -83,7 +83,7 @@ const employerFinderStackRoutes = {
   ),
   ...screenRoutes(
     names.EmployerFinderSuperList,
-    EmployerFinderSuperListScreen,
+    ConnectedEmployerFinderSuperListScreen,
     finderSuperListStackNavigatorOptions
   ),
 };
